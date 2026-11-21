@@ -164,25 +164,22 @@
       tap: false,
     });
 
-    L.control.zoom({ position: "bottomright" }).addTo(map);
-
     baseLayers = {
-      voyager: L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; CARTO',
-        subdomains: "abcd",
-        maxZoom: 20,
-      }),
-      google: L.tileLayer("https://mt1.google.com/vt/lyrs=m&hl=ja&x={x}&y={y}&z={z}", {
+      google_tw: L.tileLayer("https://mt1.google.com/vt/lyrs=m&hl=zh-TW&gl=JP&x={x}&y={y}&z={z}", {
         attribution: "&copy; Google Maps",
         maxZoom: 20,
       }),
-      osmjp: L.tileLayer("https://tile.openstreetmap.jp/styles/osm-bright-ja/{z}/{x}/{y}.png", {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      google_ja: L.tileLayer("https://mt1.google.com/vt/lyrs=m&hl=ja&gl=JP&x={x}&y={y}&z={z}", {
+        attribution: "&copy; Google Maps",
+        maxZoom: 20,
+      }),
+      osm: L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         maxZoom: 19,
       }),
     };
 
-    baseLayers.voyager.addTo(map);
+    baseLayers.google_tw.addTo(map);
 
     clusterGroup = L.markerClusterGroup({
       showCoverageOnHover: false,
@@ -249,14 +246,16 @@
       badgeText = String(routeOrderIndex + 1);
     }
 
+    const fontSize = badgeText.length >= 3 ? "7.5" : badgeText.length === 2 ? "9" : "10.5";
     const html = `
       <div class="aespa-pin ${isSelected ? "is-active" : ""} ${isClosed ? "closed-pin" : ""}">
         <svg viewBox="0 0 36 44" width="34" height="42" xmlns="http://www.w3.org/2000/svg">
           ${fillDef}
           <path d="M18 1.5C9.44 1.5 2.5 8.44 2.5 17c0 10.9 15.5 25 15.5 25s15.5-14.1 15.5-25c0-8.56-6.94-15.5-15.5-15.5z"
                 fill="${fillRef}" stroke="#FFFFFF" stroke-width="2.2"/>
+          <circle cx="18" cy="16.8" r="9.6" fill="#FFFFFF"/>
+          <text x="18" y="20.4" text-anchor="middle" fill="#121521" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="${fontSize}">${esc(badgeText)}</text>
         </svg>
-        <span class="pin-badge">${esc(badgeText)}</span>
       </div>
     `;
 
@@ -1374,6 +1373,8 @@
     });
 
     document.getElementById("fitBoundsBtn").addEventListener("click", () => renderAll(true));
+    document.getElementById("zoomInBtn")?.addEventListener("click", () => map.zoomIn());
+    document.getElementById("zoomOutBtn")?.addEventListener("click", () => map.zoomOut());
 
     document.getElementById("locateMeBtn").addEventListener("click", () => {
       if (!navigator.geolocation) {

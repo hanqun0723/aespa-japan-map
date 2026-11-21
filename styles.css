@@ -645,6 +645,12 @@ textarea {
   color: #ffffff;
 }
 
+.zoom-fab-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .map-fab {
   width: 38px;
   height: 38px;
@@ -656,12 +662,14 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
 }
 
 .map-legend {
   position: absolute;
-  bottom: 18px;
+  top: 14px;
   left: 16px;
   z-index: 450;
   background: rgba(255, 255, 255, 0.94);
@@ -839,32 +847,37 @@ textarea {
 .secondary-links-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
   gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
   padding-top: 8px;
   border-top: 1px solid var(--border-hairline);
+}
+.secondary-links-row::-webkit-scrollbar {
+  display: none;
 }
 
 .util-btn-group {
   display: flex;
   gap: 6px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .util-btn {
   border: 1px solid var(--border-hairline);
   background: var(--bg-surface);
   color: var(--ink-secondary);
-  padding: 5px 10px;
+  padding: 5px 9px;
   border-radius: var(--radius-sm);
-  font-size: 0.76rem;
+  font-size: 0.75rem;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .util-btn.active-star {
