@@ -1297,7 +1297,7 @@ textarea {
     border-right: none;
     border-radius: 20px 20px 0 0;
     box-shadow: var(--shadow-sheet);
-    transform: translateY(calc(76dvh - 72px - env(safe-area-inset-bottom, 0px)));
+    transform: translateY(calc(76dvh - 60px - env(safe-area-inset-bottom, 0px)));
     transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
     will-change: transform;
     z-index: 620;

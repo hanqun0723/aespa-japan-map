@@ -1291,7 +1291,7 @@
     panel.addEventListener(
       "touchstart",
       (ev) => {
-        if (window.innerWidth > 860 || ev.touches.length !== 1) return;
+        if (window.innerWidth > 860 || !ev.touches || ev.touches.length !== 1) return;
         const isOpen = panel.classList.contains("sheet-open");
         const onHandle = Boolean(ev.target.closest("#sheetDragHandle") || ev.target.closest(".sidebar-filters"));
         const atListTop = isOpen && listEl.contains(ev.target) && listEl.scrollTop <= 0;
@@ -1315,7 +1315,7 @@
       "touchmove",
       (ev) => {
         ev.stopPropagation();
-        if (!tracking || window.innerWidth > 860) return;
+        if (!tracking || window.innerWidth > 860 || !ev.touches || !ev.touches.length) return;
         const dy = ev.touches[0].clientY - startY;
         const isOpen = panel.classList.contains("sheet-open");
         const onHandle = Boolean(ev.target.closest("#sheetDragHandle"));
@@ -1374,6 +1374,37 @@
 
     panel.addEventListener("touchend", finishPanelDrag, { passive: true });
     panel.addEventListener("touchcancel", finishPanelDrag, { passive: true });
+
+    // Pointer-drag support on handle (mouse / remote desktop / stylus)
+    handle.addEventListener("pointerdown", (ev) => {
+      if (window.innerWidth > 860 || ev.pointerType === "touch") return;
+      ev.stopPropagation();
+      startY = ev.clientY;
+      startTime = Date.now();
+      const isOpen = panel.classList.contains("sheet-open");
+      startTranslateY = isOpen ? 0 : getCollapsedOffset();
+      currentTranslateY = startTranslateY;
+      tracking = true;
+      dragged = false;
+      handle.setPointerCapture?.(ev.pointerId);
+    });
+
+    handle.addEventListener("pointermove", (ev) => {
+      if (!tracking || window.innerWidth > 860 || ev.pointerType === "touch") return;
+      ev.stopPropagation();
+      const dy = ev.clientY - startY;
+      if (!dragged && Math.abs(dy) < 6) return;
+      dragged = true;
+      panel.classList.add("is-dragging");
+      const collapsedY = getCollapsedOffset();
+      currentTranslateY = Math.min(collapsedY, Math.max(0, startTranslateY + dy));
+      panel.style.transform = `translateY(${currentTranslateY}px)`;
+    });
+
+    handle.addEventListener("pointerup", (ev) => {
+      if (ev.pointerType === "touch") return;
+      finishPanelDrag(ev);
+    });
 
     // Swipe-down to dismiss Spot Detail Bottom Sheet on mobile
     let detailStartY = 0;
