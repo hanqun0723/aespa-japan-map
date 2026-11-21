@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#121521" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="aespa 聖地地圖" />
+  <title>aespa 日本聖地巡禮地圖｜東京・大阪・沖繩・北海道・福岡打卡指南</title>
+
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="./assets/icon.svg" />
+  <link rel="apple-touch-icon" href="./assets/icon-192.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" crossorigin="" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <!-- Mobile Floating Filter Header -->
+    <header class="mobile-top-bar" aria-label="手機版篩選列">
+      <div class="mobile-top-row">
+        <div class="select-pill-wrap">
+          <select id="mobileRegionSelect" class="region-select" aria-label="選擇地區">
+            <option value="東京・關東">東京・關東</option>
+            <option value="ALL">全日本</option>
+            <option value="大阪・京都">大阪・京都</option>
+            <option value="沖繩">沖繩</option>
+            <option value="福岡">福岡</option>
+            <option value="北海道">北海道</option>
+          </select>
+        </div>
+        <div class="mobile-search-wrap">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-3.5-3.5"></path>
+          </svg>
+          <input id="mobileSearchInput" type="search" placeholder="搜尋店名、表參道、拉麵…" autocomplete="off" />
+          <button id="mobileSearchClear" class="icon-clear-btn hidden" type="button" aria-label="清除搜尋">✕</button>
+        </div>
+        <button id="mobileAddBtn" class="top-action-btn primary" type="button" title="新增打卡點">＋</button>
+        <button id="mobileSyncBtn" class="top-action-btn" type="button" title="遠端同步與匯出">
+          <span id="mobileSyncDot" class="sync-dot"></span>☁️
+        </button>
+      </div>
+      <div id="mobileMemberBar" class="h-scroll-bar" role="tablist" aria-label="成員篩選"></div>
+      <div id="mobileCategoryBar" class="h-scroll-bar compact" role="tablist" aria-label="類型篩選"></div>
+    </header>
+
+    <!-- Desktop Sidebar & Mobile List Drawer -->
+    <aside id="sidebarPanel" class="sidebar-panel" aria-label="打卡地點清單與篩選">
+      <div id="sheetDragHandle" class="sheet-drag-handle" role="button" tabindex="0" aria-label="展開或收合清單">
+        <div class="drag-pill"></div>
+        <div class="sheet-peek-row">
+          <span id="mobileSheetSummary" class="sheet-summary-text">載入地點中…</span>
+          <span id="mobileSheetToggleLabel" class="sheet-toggle-hint">展開清單 ▲</span>
+        </div>
+      </div>
+
+      <div class="sidebar-header desktop-only">
+        <div class="brand-row">
+          <div class="brand-title-group">
+            <h1 class="brand-title">aespa 日本聖地地圖</h1>
+            <div class="sync-badge-row">
+              <span id="syncStatusBadge" class="sync-status-badge">讀取中…</span>
+            </div>
+          </div>
+          <div class="header-btn-group">
+            <button id="desktopAddBtn" class="btn btn-primary btn-sm" type="button">＋ 新增地點</button>
+            <button id="desktopSyncBtn" class="btn btn-outline btn-sm" type="button">☁️ 同步／匯出</button>
+          </div>
+        </div>
+
+        <div class="search-box">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-3.5-3.5"></path>
+          </svg>
+          <input id="desktopSearchInput" type="search" placeholder="搜尋店名、日文名、街區（如 六本木、豬排）…" autocomplete="off" />
+          <button id="desktopSearchClear" class="icon-clear-btn hidden" type="button" aria-label="清除搜尋">✕</button>
+        </div>
+      </div>
+
+      <div class="sidebar-filters">
+        <div id="desktopRegionTabs" class="region-tabs desktop-only" role="tablist" aria-label="日本區域切換"></div>
+        <div id="desktopMemberBar" class="member-filter-grid desktop-only" role="tablist" aria-label="成員篩選"></div>
+        <div id="desktopCategoryBar" class="chip-row desktop-only" role="tablist" aria-label="分類篩選"></div>
+
+        <div class="quick-filter-row">
+          <button id="filterHasIgBtn" class="mini-toggle" type="button">📸 有 IG／影片</button>
+          <button id="filterSavedBtn" class="mini-toggle" type="button">⭐ 想去清單</button>
+          <button id="filterVisitedBtn" class="mini-toggle" type="button">✅ 已踩點</button>
+          <button id="filterHideClosedBtn" class="mini-toggle" type="button">隱藏歇業</button>
+        </div>
+
+        <div class="routes-bar">
+          <span class="routes-label">一日巡禮線</span>
+          <div id="routeChips" class="route-chips-scroll"></div>
+        </div>
+      </div>
+
+      <div class="list-meta-bar">
+        <span id="resultsCountText">共 0 個打卡點</span>
+        <button id="resetFiltersBtn" class="text-link-btn hidden" type="button">重設篩選</button>
+      </div>
+
+      <div id="placesList" class="places-list" role="list"></div>
+    </aside>
+
+    <!-- Main Interactive Map Canvas -->
+    <main class="map-stage">
+      <div id="mapPickBanner" class="map-pick-banner hidden">
+        <span>📍 請直接點擊地圖選擇座標位置</span>
+        <button id="cancelMapPickBtn" class="btn btn-sm btn-outline-light" type="button">取消</button>
+      </div>
+
+      <div id="mapContainer" class="map-container" aria-label="aespa 日本聖地互動地圖"></div>
+
+      <!-- Floating Map Controls -->
+      <div class="map-floating-controls">
+        <div class="basemap-switcher" role="group" aria-label="地圖底圖切換">
+          <button class="basemap-btn active" data-layer="voyager" type="button" title="清爽街區圖">清爽</button>
+          <button class="basemap-btn" data-layer="google" type="button" title="Google 街道圖">Google</button>
+          <button class="basemap-btn" data-layer="osmjp" type="button" title="日本詳細街道">日文詳細</button>
+        </div>
+        <button id="locateMeBtn" class="map-fab" type="button" title="定位我目前的位置" aria-label="定位我的位置">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path>
+          </svg>
+        </button>
+        <button id="fitBoundsBtn" class="map-fab" type="button" title="縮放至全部顯示點位" aria-label="顯示全部點位">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Legend Pill (Desktop) -->
+      <div class="map-legend desktop-only" aria-label="成員圖釘顏色圖例">
+        <span class="legend-item"><i class="dot karina"></i>Karina</span>
+        <span class="legend-item"><i class="dot giselle"></i>Giselle</span>
+        <span class="legend-item"><i class="dot winter"></i>Winter</span>
+        <span class="legend-item"><i class="dot ningning"></i>Ningning</span>
+        <span class="legend-item"><i class="dot group"></i>多人／全員</span>
+      </div>
+
+      <!-- Spot Detail Card / Mobile Bottom Sheet -->
+      <section id="detailCard" class="detail-card hidden" aria-live="polite" aria-label="地點詳細資訊">
+        <div class="detail-sheet-handle mobile-only"></div>
+        <button id="closeDetailBtn" class="detail-close-btn" type="button" aria-label="關閉卡片">✕</button>
+        <div id="detailContent"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Remote Place Editor Modal (Add / Edit in Safari) -->
+  <div id="editorModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="editorModalTitle">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h2 id="editorModalTitle">編輯打卡地點</h2>
+        <button id="closeEditorBtn" class="icon-close-btn" type="button" aria-label="關閉">✕</button>
+      </div>
+
+      <form id="placeEditorForm" class="editor-form">
+        <input type="hidden" id="editId" />
+
+        <div class="smart-helper-box">
+          <label class="field-label" for="smartGmapsUrl">⚡ 快速帶入：貼上 Google Maps 分享連結或座標</label>
+          <div class="inline-input-row">
+            <input id="smartGmapsUrl" type="url" placeholder="貼上 https://www.google.com/maps/... 自動擷取座標與店名" />
+            <button id="parseGmapsBtn" class="btn btn-outline btn-sm" type="button">解析</button>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="field-group">
+            <label class="field-label" for="editName">顯示名稱（中文／店名）*</label>
+            <input id="editName" type="text" required placeholder="例：中華・食菜酒 金葉庭" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="editNameJa">日文原名（供 Google Maps 搜尋）</label>
+            <input id="editNameJa" type="text" placeholder="例：中華・食菜酒 金葉庭" />
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="label-with-action">
+            <span class="field-label">造訪成員（可複選）*</span>
+            <button id="selectAllMembersBtn" class="text-link-btn" type="button">一鍵全選全員</button>
+          </div>
+          <div class="member-checkbox-row" id="editMembersGroup">
+            <label class="member-check-pill karina"><input type="checkbox" value="Karina" /> Karina</label>
+            <label class="member-check-pill giselle"><input type="checkbox" value="Giselle" /> Giselle</label>
+            <label class="member-check-pill winter"><input type="checkbox" value="Winter" /> Winter</label>
+            <label class="member-check-pill ningning"><input type="checkbox" value="Ningning" /> Ningning</label>
+          </div>
+        </div>
+
+        <div class="form-grid-3">
+          <div class="field-group">
+            <label class="field-label" for="editRegion">日本大區</label>
+            <select id="editRegion">
+              <option value="東京・關東">東京・關東</option>
+              <option value="大阪・京都">大阪・京都</option>
+              <option value="沖繩">沖繩</option>
+              <option value="福岡">福岡</option>
+              <option value="北海道">北海道</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="editCity">城市</label>
+            <input id="editCity" type="text" placeholder="例：東京" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="editArea">街區／商圈</label>
+            <input id="editArea" type="text" placeholder="例：表參道、赤坂" />
+          </div>
+        </div>
+
+        <div class="form-grid-3">
+          <div class="field-group">
+            <label class="field-label" for="editCategory">主分類</label>
+            <select id="editCategory">
+              <option value="餐廳">餐廳</option>
+              <option value="咖啡廳">咖啡廳</option>
+              <option value="購物">購物</option>
+              <option value="景點">景點</option>
+              <option value="MV取景">MV取景</option>
+              <option value="演出場館">演出場館</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="editSubCategory">細分類</label>
+            <input id="editSubCategory" type="text" placeholder="例：炸豬排、烏龍麵" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="editVisitDate">造訪日期</label>
+            <input id="editVisitDate" type="text" placeholder="例：2024-07" />
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="label-with-action">
+            <label class="field-label" for="editAddress">日文詳細地址</label>
+            <div class="inline-actions">
+              <button id="autoGeocodeBtn" class="text-link-btn" type="button">🔍 依地址自動算座標</button>
+              <button id="pickOnMapBtn" class="text-link-btn" type="button">📍 在地圖點選座標</button>
+            </div>
+          </div>
+          <input id="editAddress" type="text" placeholder="例：東京都港区赤坂3丁目7-9" />
+        </div>
+
+        <div class="form-grid-3">
+          <div class="field-group">
+            <label class="field-label" for="editLat">緯度 (lat)*</label>
+            <input id="editLat" type="number" step="any" required placeholder="35.674896" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="editLng">經度 (lng)*</label>
+            <input id="editLng" type="number" step="any" required placeholder="139.737701" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="editPlaceId">Google Place ID（選填）</label>
+            <input id="editPlaceId" type="text" placeholder="ChIJ..." />
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="field-group">
+            <label class="field-label" for="editBusinessStatus">營業狀態</label>
+            <select id="editBusinessStatus">
+              <option value="OPERATIONAL">🟢 營業中 (OPERATIONAL)</option>
+              <option value="RELOCATED">🟠 已搬遷至新址 (RELOCATED)</option>
+              <option value="CLOSED_PERMANENTLY">🔴 已永久歇業 (CLOSED)</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="editStatusNote">營業提醒備註</label>
+            <input id="editStatusNote" type="text" placeholder="例：需提前預約／已遷至 7F" />
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="editIgUrl">📸 成員 IG 貼文／官方 Vlog 連結 (ig_url)</label>
+          <input id="editIgUrl" type="url" placeholder="https://www.instagram.com/p/..." />
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="editSourceUrl">📖 考據文章／聖地整理連結 (source_url)</label>
+          <input id="editSourceUrl" type="url" placeholder="https://oshito.online/map/..." />
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="editSameOrder">🍽️ 成員同款菜單／穿搭打卡亮點</label>
+          <input id="editSameOrder" type="text" placeholder="例：點青山黑豬御膳、入座 31 號桌" />
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="editNote">📝 巡禮備註說明</label>
+          <textarea id="editNote" rows="2" placeholder="補充交通方式、拍攝角度或注意事項…"></textarea>
+        </div>
+
+        <div class="modal-footer">
+          <button id="deletePlaceBtn" class="btn btn-danger-ghost hidden" type="button">刪除此地點</button>
+          <div class="footer-right-btns">
+            <button id="cancelEditorBtn" class="btn btn-outline" type="button">取消</button>
+            <button type="submit" class="btn btn-primary">儲存變更</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Cloud Sync / Remote Edit / Export Modal -->
+  <div id="syncModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="syncModalTitle">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h2 id="syncModalTitle">☁️ 遠端編輯同步與資料匯出</h2>
+        <button id="closeSyncBtn" class="icon-close-btn" type="button" aria-label="關閉">✕</button>
+      </div>
+
+      <div class="sync-modal-body">
+        <div id="syncModeBanner" class="info-banner"></div>
+
+        <!-- Local API Git Push Section (shown when connected to local server.py) -->
+        <div id="localGitSection" class="sync-card hidden">
+          <h3>🚀 同步至公開網頁 (GitHub Pages)</h3>
+          <p class="muted-text">目前連線至本機伺服器，你的所有編輯已即時寫入 <code>data/places.json</code>。點擊下方按鈕即可自動 git commit 並推上 GitHub Pages。</p>
+          <button id="localGitPushBtn" class="btn btn-primary" type="button">推送最新 places.json 至 GitHub</button>
+        </div>
+
+        <!-- GitHub Cloud API Direct Save (for iPhone Safari outside home!) -->
+        <div class="sync-card">
+          <h3>📱 手機 Safari 在外遠端直存 GitHub</h3>
+          <p class="muted-text">
+            出門在外直接用手機 Safari 打開 GitHub Pages 網址時，你在網頁內新增或修改的地點會先自動保存在手機瀏覽器中。若填入 GitHub Token（僅存於你手機 Safari 本機，絕不上傳公開庫），即可在手機上一鍵直存回 GitHub 更新全網地圖！
+          </p>
+          <div class="form-grid-2">
+            <div class="field-group">
+              <label class="field-label" for="ghRepoInput">GitHub 儲存庫 (owner/repo)</label>
+              <input id="ghRepoInput" type="text" placeholder="hanqun0723/aespa-japan-map" />
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="ghBranchInput">分支 (Branch)</label>
+              <input id="ghBranchInput" type="text" value="main" placeholder="main" />
+            </div>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="ghTokenInput">GitHub Personal Access Token（具 repo / contents:write 權限）</label>
+            <input id="ghTokenInput" type="password" placeholder="ghp_... 或 github_pat_..." autocomplete="off" />
+          </div>
+          <div class="btn-wrap-row">
+            <button id="saveGhConfigBtn" class="btn btn-outline btn-sm" type="button">儲存設定</button>
+            <button id="pushToGithubApiBtn" class="btn btn-primary btn-sm" type="button">☁️ 立即從 Safari 雲端寫入 GitHub</button>
+            <a id="openGithubWebEditLink" class="btn btn-outline btn-sm" href="https://github.com/hanqun0723/aespa-japan-map/edit/main/data/places.json" target="_blank" rel="noopener">📝 在 GitHub 網頁編輯 JSON</a>
+          </div>
+        </div>
+
+        <!-- Export / Import / Google My Maps KML -->
+        <div class="sync-card">
+          <h3>🗺️ 匯出至 Google 我的地圖／備份還原</h3>
+          <p class="muted-text">可下載 KML 檔匯入 Google Maps「你的地點 → 地圖」，或匯出／匯入完整 <code>places.json</code>。</p>
+          <div class="btn-wrap-row">
+            <button id="exportKmlBtn" class="btn btn-outline btn-sm" type="button">📍 下載 Google Maps KML 檔</button>
+            <button id="exportJsonBtn" class="btn btn-outline btn-sm" type="button">📥 下載 places.json</button>
+            <label class="btn btn-outline btn-sm file-btn-label">
+              📤 匯入 JSON
+              <input id="importJsonInput" type="file" accept=".json,application/json" hidden />
+            </label>
+            <button id="resetLocalEditsBtn" class="btn btn-danger-ghost btn-sm" type="button">🔄 放棄本機暫存並重新載入雲端</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" crossorigin=""></script>
+  <script src="./app.js"></script>
+</body>
+</html>

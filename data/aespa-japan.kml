@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>aespa 日本聖地巡禮地圖 (2022–2026)</name>
+    <description>aespa (Karina / Giselle / Winter / Ningning) 東京與全日本打卡美食、景點、購物與 MV 取景地</description>
+    <Folder>
+      <name>東京・關東</name>
+      <Placemark>
+        <name>【已搬遷】つるとんたん 六本木店 (TsuruTonTan) (Karina / Giselle / Winter / Ningning)</name>
+        <description><![CDATA[成員：Karina / Giselle / Winter / Ningning<br/>分類：餐廳（烏龍麵）<br/>造訪時間：2022-08 / 2026-04<br/>日文店名：つるとんたん UDON NOODLE Brasserie 六本木<br/>地址：東京都港区六本木7-8-6 AXALL ROPPONGI 7F<br/>同款／亮點：Karina：明太子奶油烏龍麵／Giselle：鍋燒烏龍麵／Winter：豬排咖哩烏龍麵／Ningning：酸橘烏龍麵<br/>營業備註：原六本木3丁目店鋪已遷至現址 AXALL ROPPONGI 7F；Giselle 於 2026 年 4 月已親自造訪新址<br/>說明：2022年8月全員首度訪日聚餐名店（Giselle 願望清單），2026年4月東京巨蛋公演前夕 Giselle 再度親訪搬遷後新址。<br/>IG／影片：https://www.instagram.com/p/DXg57P5E1g6/<br/>考據來源：https://oshito.online/map/17569.html]]></description>
+        <Point>
+          <coordinates>139.729675,35.665016,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>とんかつ まい泉 青山本店 (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：餐廳（炸豬排）<br/>造訪時間：2022-09<br/>日文店名：とんかつ まい泉 青山本店<br/>地址：東京都渋谷区神宮前4-8-5<br/>同款／亮點：週末及國定假日限定「青山黑豬御膳（2,800日圓含稅）」<br/>說明：MY 東京必吃經典聖地，由舊錢湯改建的挑高炸豬排老舖。<br/>IG／影片：https://www.instagram.com/p/CiFprQtBI9r/<br/>考據來源：https://oshito.online/map/4352.html]]></description>
+        <Point>
+          <coordinates>139.711426,35.667873,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>杉養蜂園 表參道店 (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：咖啡廳（甜點冰品）<br/>造訪時間：2022-09<br/>日文店名：杉養蜂園 表参道店<br/>地址：東京都渋谷区神宮前4-4-14<br/>同款／亮點：巢房蜜霜淇淋（巣房蜜ソフトクリーム）<br/>說明：與まい泉青山本店同日行程，手持整塊蜂巢蜜霜淇淋打卡。<br/>IG／影片：https://www.instagram.com/p/CiFprQtBI9r/<br/>考據來源：https://oshito.online/map/4340.html]]></description>
+        <Point>
+          <coordinates>139.711456,35.667671,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>One Garden 西麻布店 (Karina / Winter)</name>
+        <description><![CDATA[成員：Karina / Winter<br/>分類：餐廳（日式料理）<br/>造訪時間：2023-04<br/>日文店名：ワンガーデン 西麻布店<br/>地址：東京都港区西麻布3-17-29 富士見坂プレイス 2F<br/>同款／亮點：釜炊鯛魚飯（鯛めし）與高湯鍋物<br/>營業備註：熱門包廂日料，建議提前預約<br/>說明：Karina 與 Winter 結伴同行，於包廂享用精緻和食（Winter 貼文：instagram.com/p/Cql8-_sO-_E/）。<br/>IG／影片：https://www.instagram.com/p/Cqkyvk-rH1N/<br/>考據來源：https://pro-otaku.com/2023-aespa-place/]]></description>
+        <Point>
+          <coordinates>139.725021,35.658821,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ミズノボル (Mizunoboru) (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：餐廳（鹽味拉麵）<br/>造訪時間：2024-03<br/>日文店名：ミズノボル<br/>地址：東京都渋谷区宇田川町29-3<br/>同款／亮點：推測點選「豪快出汁鹽拉麵」或「出汁鹽餛飩麵」<br/>說明：2024年2月於澀谷中心街開幕的鹽味拉麵專門店，營業至深夜。<br/>IG／影片：https://www.instagram.com/reel/C42ywmzLwC-/<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>139.69838,35.660522,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>すし龍 (Sushi Tatsu) (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：餐廳（江戶前壽司）<br/>造訪時間：2024-07<br/>日文店名：渋谷 すし龍<br/>地址：東京都渋谷区渋谷1-15-19 東口二葉ビル 4F<br/>同款／亮點：包廂壽司套餐與生啤酒<br/>營業備註：建議事先網路或電話預約<br/>說明：粉絲依同款牽牛花餐墊紙比對，推測 Karina 在同一趟東京行程疑似二訪。<br/>IG／影片：https://www.instagram.com/p/C9MypJry8Xu/<br/>考據來源：https://manimani-korea.net/aespa-karina-tokyo/]]></description>
+        <Point>
+          <coordinates>139.702469,35.660488,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>渋谷鉄板焼き OKANOUE (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：餐廳（鐵板燒／壽司）<br/>造訪時間：2024-07<br/>日文店名：渋谷鉄板焼き OKANOUE<br/>地址：東京都渋谷区道玄坂1-17-7 いちのビル 4F<br/>同款／亮點：鐵板燒與壽司料理<br/>說明：與銀座藝術水族館同批貼文公開之道玄坂隱密鐵板燒名店。<br/>IG／影片：https://www.instagram.com/p/C9sRSEmyzAl/<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>139.697037,35.656776,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Duffle with KAPITAL (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：購物（潮牌服飾）<br/>造訪時間：2024-07<br/>日文店名：Duffle with KAPITAL<br/>地址：東京都渋谷区恵比寿南2-24-2 ファニービル<br/>同款／亮點：背 KAPITAL 超大托特包店內打卡留影<br/>說明：惠比壽丹寧與民族風設計潮牌店。<br/>IG／影片：https://www.instagram.com/p/C9PFMW4yRGg/<br/>考據來源：https://oshito.online/map/11717.html]]></description>
+        <Point>
+          <coordinates>139.710114,35.642895,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>RAYARD MIYASHITA PARK（澀谷橫丁） (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：景點（複合商場／街拍）<br/>造訪時間：2024-07<br/>日文店名：RAYARD MIYASHITA PARK 渋谷横丁<br/>地址：東京都渋谷区神宮前6-20-10<br/>同款／亮點：South 1F 澀谷橫丁燈籠前比耶街拍<br/>說明：宮下公園 1 樓「渋谷横丁」霓虹燈籠走廊外熱門打卡點。<br/>IG／影片：https://www.instagram.com/p/C9O1cMNy9b2/<br/>考據來源：https://oshito.online/map/11715.html]]></description>
+        <Point>
+          <coordinates>139.702011,35.662376,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>神宮前 Evercastle 前＆東急 Plaza 原宿斑馬線 (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：景點（街拍地標）<br/>造訪時間：2024-07<br/>日文店名：神宮前交差点（ラフォーレ原宿前）<br/>地址：東京都渋谷区神宮前3-26-3<br/>同款／亮點：原宿街頭與斑馬線（背景為清江苑原宿店）街拍<br/>說明：涵蓋神宮前3-26-3 Evercastle 前及神宮前交叉口斑馬線街拍。<br/>IG／影片：https://www.instagram.com/p/C9MypJry8Xu/<br/>考據來源：https://oshito.online/map/11710.html]]></description>
+        <Point>
+          <coordinates>139.708847,35.67067,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>銀座藝術水族館美術館 (Art Aquarium Museum GINZA) (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：景點（藝術展覽／街拍）<br/>造訪時間：2024-07<br/>日文店名：アートアクアリウム美術館 GINZA<br/>地址：東京都中央区銀座4-6-16 銀座三越新館8F<br/>同款／亮點：夢幻金魚光影藝術展＆銀座4-7-5松屋通り過馬路街拍<br/>說明：位於銀座三越新館，同組貼文亦於鄰近銀座松屋通斑馬線（oshito 11865）留影。<br/>IG／影片：https://www.instagram.com/p/C9sRSEmyzAl/<br/>考據來源：https://oshito.online/map/11862.html]]></description>
+        <Point>
+          <coordinates>139.765594,35.671577,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>赤坂櫻坂（赤坂の桜坂） (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：景點（賞櫻街拍）<br/>造訪時間：2024-04<br/>日文店名：赤坂の桜坂<br/>地址：東京都港区赤坂1-12-20<br/>同款／亮點：春季夜櫻坡道漫步打卡<br/>說明：赤坂ークヒルズ（ARK Hills）旁的著名賞櫻坡道。<br/>IG／影片：https://www.instagram.com/p/C5gUXZpSgmk/<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>139.741302,35.667343,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中華・食菜酒 金葉庭 (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：餐廳（中華料理／街拍）<br/>造訪時間：2024-04<br/>日文店名：中華・食菜酒 金葉庭<br/>地址：東京都港区赤坂3-7-9<br/>同款／亮點：金葉庭店門口赤坂夜間街拍打卡點<br/>說明：位於赤坂見附站附近，Karina 站在復古招牌門口拍照之經典點位。<br/>IG／影片：https://www.instagram.com/p/C5gUXZpSgmk/<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>139.737701,35.674896,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>やげんぼり 赤坂店 (Yagenbori) (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：餐廳（京料理・鴨川料理）<br/>造訪時間：2025-05<br/>日文店名：やげんぼり 赤坂店<br/>地址：東京都港区赤坂3-19-5<br/>同款／亮點：京都風味懷石／午間出汁捲蛋定食亦極受歡迎<br/>營業備註：原 IG 貼文已刪除，店鋪正常營業中<br/>說明：EXO D.O. 等多位 SM 藝人也曾造訪的赤坂京料理名店；Karina 原 IG 貼文後來已刪除。<br/>考據來源：https://oshito.online/map/17362.html]]></description>
+        <Point>
+          <coordinates>139.736191,35.675945,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>【已歇業】BE:SIDE 表參道店（船橋屋） (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：咖啡廳（和菓子咖啡）<br/>造訪時間：2022-08<br/>日文店名：BE:SIDE 表参道店<br/>地址：東京都渋谷区神宮前3-14-6<br/>同款／亮點：賞味期限 20 分鐘「水葛餅套餐（みずくずもち）」<br/>營業備註：已於 2025 年 3 月 30 日正式歇業閉店，請勿撲空<br/>說明：Giselle 早期表參道愛店（2022年8月與2023年8月發文），惟已於 2025/3/30 永久閉店。<br/>IG／影片：https://www.instagram.com/p/Cg3O4pihlcj/<br/>考據來源：https://oshito.online/map/4356.html]]></description>
+        <Point>
+          <coordinates>139.710876,35.669476,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chrome Hearts 東京青山店 (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：購物（精品銀飾服飾）<br/>造訪時間：2022-08<br/>日文店名：CHROME HEARTS TOKYO<br/>地址：東京都港区南青山6-3-14<br/>同款／亮點：於店內皮革沙發區留影打卡<br/>說明：南青山獨棟旗艦店，Giselle 私服最愛銀飾潮牌。<br/>IG／影片：https://www.instagram.com/p/Cg3O4pihlcj/<br/>考據來源：https://oshito.online/map/2480.html]]></description>
+        <Point>
+          <coordinates>139.716278,35.660877,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>KIDDY LAND 原宿店 (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：購物（角色雜貨玩具）<br/>造訪時間：2022-08<br/>日文店名：キデイランド 原宿店<br/>地址：東京都渋谷区神宮前6-1-9<br/>同款／亮點：店內抱哆啦A夢玩偶拍照<br/>說明：表參道超人氣卡通角色周邊專賣店。<br/>IG／影片：https://www.instagram.com/p/ChuRn0APCAc/<br/>考據來源：https://oshito.online/map/4359.html]]></description>
+        <Point>
+          <coordinates>139.706512,35.667809,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GR8（Laforet 原宿 2.5F） (Giselle / Ningning)</name>
+        <description><![CDATA[成員：Giselle / Ningning<br/>分類：購物（潮流選物店）<br/>造訪時間：2022-08 / 2024-07<br/>日文店名：GR8 ラフォーレ原宿<br/>地址：東京都渋谷区神宮前1-11-6 ラフォーレ原宿 2.5F<br/>同款／亮點：Giselle 木質店門前打卡；Ningning 2024年原宿掃貨亦造訪（IG: C89Q5XUyPvy）<br/>說明：國際藝人訪日必逛的 Laforet 原宿前衛買手店，Giselle 與 Ningning 皆曾打卡。<br/>IG／影片：https://www.instagram.com/p/ChuRn0APCAc/<br/>考據來源：https://oshito.online/map/4354.html]]></description>
+        <Point>
+          <coordinates>139.705551,35.668907,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>HAY TOKYO (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：咖啡廳（北歐設計選物＆咖啡）<br/>造訪時間：2022-08<br/>日文店名：HAY TOKYO<br/>地址：東京都渋谷区神宮前5-10-1 GYRE B1F<br/>同款／亮點：附設咖啡區享用冰咖啡<br/>說明：位於表參道 GYRE 大樓 B1F 的丹麥設計家居旗艦店。<br/>IG／影片：https://www.instagram.com/p/ChuRn0APCAc/<br/>考據來源：https://oshito.online/map/2464.html]]></description>
+        <Point>
+          <coordinates>139.706924,35.667614,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>唐吉訶德 六本木店 (Don Quijote) (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：購物（零售量販／街拍）<br/>造訪時間：2023-04<br/>日文店名：ドン・キホーテ 六本木店<br/>地址：東京都港区六本木3-14-10<br/>同款／亮點：店鋪入口前夜間街拍打卡<br/>說明：六本木中心地標唐吉訶德門口街拍。<br/>IG／影片：https://www.instagram.com/p/CqlE2g7L3HK/<br/>考據來源：https://pro-otaku.com/2023-aespa-place/]]></description>
+        <Point>
+          <coordinates>139.734589,35.662437,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>アートマサシヤ (Art Masashiya) (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：餐廳（無化調拉麵）<br/>造訪時間：2024-01<br/>日文店名：アートマサシヤ<br/>地址：東京都渋谷区南平台町2-8 日興パレス南平台アヅマ 101<br/>同款／亮點：100% 天然高湯無化學調味料拉麵（招牌附玉子燒配料）<br/>營業備註：僅午間營業為主（約11:30–15:00，週三公休），湯頭售完即止<br/>說明：隱身澀谷南平台町／神泉站的在地行家拉麵小店。<br/>IG／影片：https://www.instagram.com/p/C2UxHYgrKv1/<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>139.696045,35.655373,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>DENHAM 麻布台之丘店 (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：購物（設計師丹寧潮牌）<br/>造訪時間：2024<br/>日文店名：DENHAM 麻布台ヒルズ<br/>地址：東京都港区麻布台1-3-1 麻布台ヒルズ タワープラザ 2F<br/>同款／亮點：麻布台之丘 Tower Plaza 2F 逛街打卡<br/>說明：荷蘭阿姆斯特丹丹寧品牌，與 3F「蕎麦前 山都」為同日麻布台行程。<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>139.740921,35.661549,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>蕎麦前 山都 麻布台之丘店 (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：餐廳（蕎麥麵・和食）<br/>造訪時間：2024<br/>日文店名：蕎麦前 山都 麻布台ヒルズ店<br/>地址：東京都港区麻布台1-3-1 麻布台ヒルズ タワープラザ 3F<br/>同款／亮點：蕎麥麵、天婦羅與生魚片套餐<br/>說明：位於麻布台之丘 Tower Plaza 3F 的摩登蕎麥酒館。<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>139.740921,35.661549,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>British Indian Cafe 1930 (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：咖啡廳（英式印度咖哩咖啡廳）<br/>造訪時間：2024-07<br/>日文店名：ブリティッシュ インディアン カフェ 1930<br/>地址：東京都渋谷区神宮前3-27-7<br/>同款／亮點：推測點選起司烤餅（チーズナン）與奶油咖哩<br/>說明：裏原宿復古英倫風印度咖哩咖啡館。<br/>IG／影片：https://www.instagram.com/p/C9KecneS54X/<br/>考據來源：https://oshito.online/map/11569.html]]></description>
+        <Point>
+          <coordinates>139.709,35.671066,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>韓國料理店 ハルハル (Haruharu) (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：餐廳（韓國料理）<br/>造訪時間：2024-07<br/>日文店名：韓国料理 ハルハル 高円寺<br/>地址：東京都杉並区高円寺北3-22-10 大一市場<br/>同款／亮點：霓虹燈下座位；點辣炒雞排、生牛肉拌飯與 5 塊洋釀炸雞<br/>營業備註：市場內座位有限，請配合店家低消與用餐禮儀<br/>說明：位於高円寺復古「大一市場」內的道地韓式小館。<br/>IG／影片：https://www.instagram.com/p/C9NGD2aSmbn/<br/>考據來源：https://oshito.online/map/11706.html]]></description>
+        <Point>
+          <coordinates>139.649063,35.70623,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>唐吉訶德 新宿歌舞伎町店前 (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：景點（街拍地標）<br/>造訪時間：2024-07<br/>日文店名：ドン・キホーテ 新宿歌舞伎町店<br/>地址：東京都新宿区歌舞伎町1-16-5<br/>同款／亮點：歌舞伎町霓虹招牌前街頭留影<br/>說明：2024年7月7日 IG 貼文公開的新宿歌舞伎町街拍。<br/>IG／影片：https://www.instagram.com/p/C9FUVjvSmLo/<br/>考據來源：https://oshito.online/map/11567.html]]></description>
+        <Point>
+          <coordinates>139.701645,35.69379,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>UGG Tokyo Flagship 原宿旗艦店 (Giselle / Ningning)</name>
+        <description><![CDATA[成員：Giselle / Ningning<br/>分類：購物（潮流鞋履服飾）<br/>造訪時間：2024-12<br/>日文店名：UGG Tokyo Flagship<br/>地址：東京都渋谷区神宮前4-31-12<br/>同款／亮點：Giselle 與 Ningning 原宿約會逛店及門前街道合照（Ningning IG: DDHkcSOzG_O）<br/>說明：原宿明治通上的大型旗艦店，兩人亦於店前人行道（oshito 14104）街拍。<br/>IG／影片：https://www.instagram.com/p/DDHdHv0y2mt/<br/>考據來源：https://oshito.online/map/14102.html]]></description>
+        <Point>
+          <coordinates>139.706238,35.669426,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>石の専門店 コスモスペース 原宿店 (Giselle / Ningning)</name>
+        <description><![CDATA[成員：Giselle / Ningning<br/>分類：購物（天然石・水晶礦石店）<br/>造訪時間：2024-12<br/>日文店名：石の専門店 コスモスペース 原宿店<br/>地址：東京都渋谷区神宮前3-22-11<br/>同款／亮點：挑選天然能量石與礦石標本<br/>說明：Giselle 與 Ningning 2024年12月原宿半日遊同訪之特色礦石小店。<br/>IG／影片：https://www.instagram.com/p/DDHdHv0y2mt/<br/>考據來源：https://oshito.online/map/14106.html]]></description>
+        <Point>
+          <coordinates>139.707108,35.670341,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>笑たこ 原宿表參道店 (Giselle / Ningning)</name>
+        <description><![CDATA[成員：Giselle / Ningning<br/>分類：餐廳（章魚燒小吃）<br/>造訪時間：2024-12<br/>日文店名：笑たこ 原宿表参道店<br/>地址：東京都渋谷区神宮前5-11-3<br/>同款／亮點：原宿街頭現做章魚燒<br/>說明：Giselle 與 Ningning 原宿約會邊走邊吃的章魚燒名店。<br/>IG／影片：https://www.instagram.com/p/DDHdHv0y2mt/<br/>考據來源：https://oshito.online/map/14100.html]]></description>
+        <Point>
+          <coordinates>139.706802,35.667007,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>鳥竹 總本店 (Toritake Sohonten) (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：餐廳（燒鳥串燒居酒屋）<br/>造訪時間：2026-01<br/>日文店名：鳥竹 総本店<br/>地址：東京都渋谷区道玄坂1-6-1<br/>同款／亮點：大串炭火燒鳥串燒<br/>說明：Giselle 於 2026 年初「jimoto（老家）」東京私照中公開的澀谷道玄坂昭和老牌串燒店。<br/>IG／影片：https://www.instagram.com/p/DT7dfjqEvoB/<br/>考據來源：https://oshito.online/map/17343.html]]></description>
+        <Point>
+          <coordinates>139.699066,35.658012,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>AKIBA TARGET-1 秋葉原空氣槍射擊場 (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：景點（室內射擊體驗）<br/>造訪時間：2026-01<br/>日文店名：シューティングレンジ ターゲットワン 秋葉原店<br/>地址：東京都千代田区外神田2-9-3 ユニオンビル工新 B1F<br/>同款／亮點：室內空氣槍射擊體驗（貼文並展示《刀劍神域外傳 GGO》聯名 P-90 Plus Version Llenn）<br/>說明：Giselle「jimoto」貼文引發日媒熱議的秋葉原射擊場。<br/>IG／影片：https://www.instagram.com/p/DT7dfjqEvoB/<br/>考據來源：https://oshito.online/map/17347.html]]></description>
+        <Point>
+          <coordinates>139.768738,35.701126,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>いぬカフェ Rio 秋葉原店（狗狗咖啡廳） (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：咖啡廳（狗狗互動咖啡廳）<br/>造訪時間：2026-01<br/>日文店名：いぬカフェRio 秋葉原店<br/>地址：東京都千代田区外神田4-4-2 HULIC&amp;New AKIHABARA 3F<br/>同款／亮點：與店內狗狗互動療癒時光<br/>說明：與秋葉原射擊場同批「jimoto」東京日常私照公開。<br/>IG／影片：https://www.instagram.com/p/DT7dfjqEvoB/<br/>考據來源：https://oshito.online/map/17350.html]]></description>
+        <Point>
+          <coordinates>139.771759,35.701214,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Beard Papa's Wing 新橋店 (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：咖啡廳（泡芙甜點）<br/>造訪時間：2025-04<br/>日文店名：ビアードパパ ウィング新橋店<br/>地址：東京都港区新橋2丁目 東口地下街1号 ウィング新橋<br/>同款／亮點：現烤脆皮泡芙<br/>說明：位於新橋站地下連通道 Wing 新橋商場內的日式泡芙專門店。<br/>IG／影片：https://www.instagram.com/p/DH5M7dcyXM6/<br/>考據來源：https://oshito.online/map/17366.html]]></description>
+        <Point>
+          <coordinates>139.757095,35.666859,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>六本木 Yukizaki 大樓前（ゆきざきビル） (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：景點（街拍地標）<br/>造訪時間：2026-04<br/>日文店名：六本木ゆきざきビル<br/>地址：東京都港区六本木5-16-1<br/>同款／亮點：六本木街頭夜拍（同批貼文重訪 TsuruTonTan 六本木新址）<br/>說明：2026年4月東京巨蛋巡演期間發布之六本木街拍座標。<br/>IG／影片：https://www.instagram.com/p/DXg57P5E1g6/<br/>考據來源：https://oshito.online/map/17573.html]]></description>
+        <Point>
+          <coordinates>139.735794,35.660809,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>明治神宮＆杜のテラス (Forest Terrace) (Winter)</name>
+        <description><![CDATA[成員：Winter<br/>分類：景點（神社森林／咖啡）<br/>造訪時間：2024-07<br/>日文店名：明治神宮 フォレストテラス明治神宮<br/>地址：東京都渋谷区代々木神園町1-1<br/>同款／亮點：森林綠蔭長椅拍照＆杜のテラス咖啡廳小憩<br/>說明：Winter 展現自然療癒偏好的原宿綠洲散步路線起點。<br/>IG／影片：https://www.instagram.com/p/C9HcJjTpF9a/<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>139.694423,35.671583,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>佐賀みつせ鶏 高しな 中野坂上店 (Winter)</name>
+        <description><![CDATA[成員：Winter<br/>分類：餐廳（雞肉料理居酒屋）<br/>造訪時間：2024-07<br/>日文店名：佐賀みつせ鶏 高しな 中野坂上店<br/>地址：東京都中野区中央1-32-5<br/>同款／亮點：佐賀三瀨雞串燒料理、推測飲品為「鮮榨番茄沙瓦（生トマトハイ）」<br/>營業備註：巷弄居酒屋座位有限，請遵守店家基本消費禮儀<br/>說明：Winter 與明治神宮同批貼文分享的溫馨雞料理居酒屋。<br/>IG／影片：https://www.instagram.com/p/C9HcJjTpF9a/<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>139.684128,35.697823,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>芝公園・東京鐵塔周邊（芝公園4-7） (Winter)</name>
+        <description><![CDATA[成員：Winter<br/>分類：景點（城市夜景地標）<br/>造訪時間：2024-12<br/>日文店名：芝公園（東京タワービュー）<br/>地址：東京都港区芝公園4-7<br/>同款／亮點：冬季夜間與點燈東京鐵塔同框留影<br/>說明：芝公園經典仰望東京鐵塔視角，發布後引發日本社群熱烈迴響。<br/>考據來源：https://sportsseoulweb.jp/star_topic/id=108464]]></description>
+        <Point>
+          <coordinates>139.748413,35.657249,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>すし巽 (Sushi Tatsumi) (Winter)</name>
+        <description><![CDATA[成員：Winter<br/>分類：餐廳（高級江戶前壽司）<br/>造訪時間：2025-08<br/>日文店名：すし巽 六本木<br/>地址：東京都港区六本木4-12-2<br/>同款／亮點：主廚おまかせ江戶前壽司套餐<br/>營業備註：高級壽司名店，務必提前預約<br/>說明：六本木站步行1分鐘；SMTOWN LIVE 2025 東京站後造訪，Winter 於 IG 限動大讚「おいしかった（好吃）」。<br/>考據來源：https://manimani-korea.net/smtown-live-2025/]]></description>
+        <Point>
+          <coordinates>139.731506,35.664528,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>TENNOZ breadworks &amp; Lily cakes (Winter)</name>
+        <description><![CDATA[成員：Winter<br/>分類：咖啡廳（水岸烘焙甜點咖啡廳）<br/>造訪時間：2025-08<br/>日文店名：Lily cakes<br/>地址：東京都品川区東品川2-1-6<br/>同款／亮點：藍色夏季限定刨冰（推測為 Summer Fruit Lemon）<br/>營業備註：正確地址位於品川區東品川2-1-6（部分舊文曾誤植為六本木）<br/>說明：天王洲運河畔複合烘焙甜點空間，氣氛極佳。<br/>IG／影片：https://www.instagram.com/p/DNIU3fzzHN3/<br/>考據來源：https://oshito.online/map/16438.html]]></description>
+        <Point>
+          <coordinates>139.74791,35.62249,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>天王洲接觸橋（天王洲ふれあい橋） (Winter)</name>
+        <description><![CDATA[成員：Winter<br/>分類：景點（運河木棧橋地標）<br/>造訪時間：2025-08<br/>日文店名：天王洲ふれあい橋<br/>地址：東京都品川区東品川2-1<br/>同款／亮點：運河畔復古鐵橋與木棧道散步街拍<br/>說明：緊鄰 Lily cakes 旁的多部日劇取景名橋。<br/>IG／影片：https://www.instagram.com/p/DNIU3fzzHN3/<br/>考據來源：https://oshito.online/map/16433.html]]></description>
+        <Point>
+          <coordinates>139.747696,35.622108,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>カワウソカフェ HARRY 原宿露台店（水獺咖啡廳） (Ningning)</name>
+        <description><![CDATA[成員：Ningning<br/>分類：咖啡廳（動物互動體驗咖啡）<br/>造訪時間：2023-04<br/>日文店名：カワウソカフェ HARRY 原宿テラス店<br/>地址：東京都渋谷区神宮前4-26-5 神宮前426ビル 3F<br/>同款／亮點：與水獺、刺蝟、龍貓（絨鼠）近距離互動餵食<br/>說明：位於原宿 Cat Street 入口附近，Ningning 療癒動物體驗聖地。<br/>考據來源：https://pro-otaku.com/2023-aespa-place/]]></description>
+        <Point>
+          <coordinates>139.708069,35.669174,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ABC-MART GRAND STAGE 原宿店 (Ningning)</name>
+        <description><![CDATA[成員：Ningning<br/>分類：購物（潮流運動鞋履）<br/>造訪時間：2024-07<br/>日文店名：ABC-MART GRAND STAGE 原宿店<br/>地址：東京都渋谷区神宮前1-9-18 パトリアビル 1F<br/>同款／亮點：原宿限定鞋款掃貨與鄰近自動販賣機前（神宮前1-11-1）街拍<br/>說明：同批貼文亦包含 Laforet 原宿前及東京中央教會旁自動販賣機（oshito 11565）街拍。<br/>IG／影片：https://www.instagram.com/p/C89Q5XUyPvy/<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>139.705704,35.66943,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Apple 表參道 (Ningning)</name>
+        <description><![CDATA[成員：Ningning<br/>分類：購物（科技旗艦店）<br/>造訪時間：2024-07<br/>日文店名：Apple 表参道<br/>地址：東京都渋谷区神宮前4-2-13<br/>同款／亮點：表參道玻璃帷幕旗艦店內外打卡<br/>說明：表參道櫸木大道地標門市。<br/>IG／影片：https://www.instagram.com/p/C9MOJZXSvi3/<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>139.710876,35.666405,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>銀座あけぼの 銀座本店 (Ginza Akebono) (Ningning)</name>
+        <description><![CDATA[成員：Ningning<br/>分類：咖啡廳（老牌和菓子）<br/>造訪時間：2024-07<br/>日文店名：銀座あけぼの 銀座本店<br/>地址：東京都中央区銀座5-7-19<br/>同款／亮點：季節限定「麝香葡萄大福（シャインマスカット大福）」<br/>說明：銀座四丁目十字路口旁的昭和和菓子名店，夏季限定麝香葡萄大福極受推崇。<br/>IG／影片：https://www.instagram.com/p/C9MOJZXSvi3/<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>139.764465,35.671326,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>クラフト小川・ぎゃらりー小川＆赤坂サンビル (Ningning)</name>
+        <description><![CDATA[成員：Ningning<br/>分類：購物（日本傳統器皿藝廊）<br/>造訪時間：2024-07<br/>日文店名：クラフト小川 ぎゃらりー小川<br/>地址：東京都港区赤坂3-12-22<br/>同款／亮點：手持日式手工陶器拍攝文青黑白照＆鄰近赤坂サンビル（赤坂3-12-10）街拍<br/>說明：展現 Ningning 獨特藝術審美的赤坂老字號器皿藝廊。<br/>IG／影片：https://www.instagram.com/p/C8_e6iySZTX/<br/>考據來源：https://oshito.online/map/11553.html]]></description>
+        <Point>
+          <coordinates>139.737854,35.673698,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>東京迪士尼海洋 (Tokyo DisneySea) (Karina / Giselle / Ningning)</name>
+        <description><![CDATA[成員：Karina / Giselle / Ningning<br/>分類：景點（主題樂園）<br/>造訪時間：2025-05<br/>日文店名：東京ディズニーシー<br/>地址：千葉県浦安市舞浜1-13<br/>同款／亮點：Karina：火腿豬髮箍／Giselle：史迪奇髮箍（配文 ohana）／Ningning：彼得潘 Lost Kids 小熊帽<br/>說明：2025年5月橫濱粉絲見面會隔日三人無偽裝同遊東京迪士尼海洋。<br/>IG／影片：https://www.instagram.com/p/DKHrtTUyBPT/<br/>考據來源：https://kstyle.com/article.ksn?articleNo=2261879]]></description>
+        <Point>
+          <coordinates>139.885078,35.626711,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>《Hot Mess》MV：西新宿自動販賣機＆D4出口 (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：MV取景（MV拍攝街角）<br/>造訪時間：2024-07<br/>日文店名：西新宿駅 D4出口周辺<br/>地址：東京都新宿区西新宿1-4-11<br/>同款／亮點：日本出道單曲《Hot Mess》Karina 街頭販賣機與地鐵西新宿站 D4 出口（西新宿1-3-17）取景處<br/>說明：無須消費即可徒步巡禮的新宿西口 MV 場景。<br/>IG／影片：https://www.youtube.com/watch?v=2iK3ccCsI6s<br/>考據來源：https://pro-otaku.com/aespa-hot-mess-place/]]></description>
+        <Point>
+          <coordinates>139.697662,35.692989,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>《Hot Mess》MV：新宿 Kaleido 大樓前 (Karina / Ningning)</name>
+        <description><![CDATA[成員：Karina / Ningning<br/>分類：MV取景（MV拍攝街角）<br/>造訪時間：2024-07<br/>日文店名：新宿カレイドビル<br/>地址：東京都新宿区西新宿7-1-1<br/>同款／亮點：大樓前與鄰近自動販賣機前 MV 畫面<br/>說明：位於新宿大ガード西交叉口旁，Karina 與 Ningning 皆有在此取景。<br/>IG／影片：https://www.youtube.com/watch?v=2iK3ccCsI6s<br/>考據來源：https://pro-otaku.com/aespa-hot-mess-place/]]></description>
+        <Point>
+          <coordinates>139.699387,35.693836,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>《Hot Mess》MV：新宿 Subnade 地下街 6・7號出口 (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：MV取景（MV拍攝街角）<br/>造訪時間：2024-07<br/>日文店名：新宿サブナード<br/>地址：東京都新宿区歌舞伎町1-2-2<br/>同款／亮點：靖國通地下街 6 號與 7 號出口周邊場景<br/>說明：Giselle 於《Hot Mess》MV 中的復古地下街取景地。<br/>IG／影片：https://www.youtube.com/watch?v=2iK3ccCsI6s<br/>考據來源：https://pro-otaku.com/aespa-hot-mess-place/]]></description>
+        <Point>
+          <coordinates>139.703705,35.693451,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>《Hot Mess》MV：Yunika Vision 大螢幕＆大ガード鐵道橋下 (Giselle / Ningning)</name>
+        <description><![CDATA[成員：Giselle / Ningning<br/>分類：MV取景（MV拍攝街角）<br/>造訪時間：2024-07<br/>日文店名：ユニカビジョン 新宿<br/>地址：東京都新宿区新宿3-23-7<br/>同款／亮點：都道302號線大螢幕與新宿大ガード鐵道高架橋下<br/>說明：亦常播放 K-POP 應援廣告的新宿代表地標。<br/>IG／影片：https://www.youtube.com/watch?v=2iK3ccCsI6s<br/>考據來源：https://pro-otaku.com/aespa-hot-mess-place/]]></description>
+        <Point>
+          <coordinates>139.700516,35.693394,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>《Hot Mess》MV：新宿西口思い出横丁＆Halc後側街區 (Winter)</name>
+        <description><![CDATA[成員：Winter<br/>分類：MV取景（MV拍攝街角）<br/>造訪時間：2024-07<br/>日文店名：新宿西口 思い出横丁<br/>地址：東京都新宿区西新宿1-2<br/>同款／亮點：新宿西口 Halc 後側舊青梅街道、UNIQLO 新宿西口店前與思い出横丁居酒屋巷弄<br/>說明：Winter 於《Hot Mess》MV 個人片段集中取景區。<br/>IG／影片：https://www.youtube.com/watch?v=2iK3ccCsI6s<br/>考據來源：https://pro-otaku.com/aespa-hot-mess-place/]]></description>
+        <Point>
+          <coordinates>139.699295,35.693363,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>東京巨蛋 (Tokyo Dome) (Karina / Giselle / Winter / Ningning)</name>
+        <description><![CDATA[成員：Karina / Giselle / Winter / Ningning<br/>分類：演出場館（巨蛋公演聖地）<br/>造訪時間：2022–2027<br/>日文店名：東京ドーム<br/>地址：東京都文京区後楽1-3-61<br/>同款／亮點：海外女歌手出道最快登蛋紀錄（2023 HYPER LINE、2024 PARALLEL LINE、2026 aeXIS LINE、2027 COMPLaeXITY）<br/>說明：aespa 日本最具象徵意義的殿堂級公演聖地。<br/>考據來源：https://lignea.co.jp/aespa/]]></description>
+        <Point>
+          <coordinates>139.751891,35.70564,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>國立代代木競技場 第一體育館 (Karina / Giselle / Winter / Ningning)</name>
+        <description><![CDATA[成員：Karina / Giselle / Winter / Ningning<br/>分類：演出場館（巡演場館）<br/>造訪時間：2023 / 2025<br/>日文店名：国立代々木競技場 第一体育館<br/>地址：東京都渋谷区神南2-1-1<br/>同款／亮點：2023 HYPER LINE ＆ 2025 aeXIS LINE 東京公演場館<br/>說明：緊鄰明治神宮與原宿商圈，可與原宿表參道巡禮路線完美串聯。<br/>考據來源：https://lignea.co.jp/aespa/]]></description>
+        <Point>
+          <coordinates>139.701874,35.668793,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PIA ARENA MM（橫濱） (Karina / Giselle / Winter / Ningning)</name>
+        <description><![CDATA[成員：Karina / Giselle / Winter / Ningning<br/>分類：演出場館（日本初登台場館）<br/>造訪時間：2022-08 / 2025-05<br/>日文店名：ぴあアリーナMM<br/>地址：神奈川県横浜市西区みなとみらい3-2-2<br/>同款／亮點：2022年8月《JAPAN PREMIUM SHOWCASE 2022 〜SYNK〜》日本首次登台＆2025見面會場地<br/>說明：aespa 日本活動原點紀念場館。<br/>考據來源：https://lignea.co.jp/aespa/]]></description>
+        <Point>
+          <coordinates>139.627914,35.45565,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>大阪・京都</name>
+      <Placemark>
+        <name>お好み焼・鉄板焼 いろは満月 岸和田店 (Karina / Giselle / Winter / Ningning)</name>
+        <description><![CDATA[成員：Karina / Giselle / Winter / Ningning<br/>分類：餐廳（大阪燒・鐵板燒）<br/>造訪時間：2023<br/>日文店名：お好み焼・鉄板焼 いろは満月 岸和田店<br/>地址：大阪府岸和田市西之内町10-38<br/>同款／亮點：全員入座「31號桌」；點滿月燒、いろは炒麵、沖繩自然海鹽 Q 彈長薯條<br/>營業備註：如欲指定成員同款「31號桌」建議事先電話預約<br/>說明：肉店起家的大阪燒名店，位於往返關西機場動線上，適合落地或回程順訪。<br/>考據來源：https://sukimazikan-otomo.com/aespa-seichi-osaka/]]></description>
+        <Point>
+          <coordinates>135.392151,34.462887,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>にし家 本店 (Nishiya Honten) (Karina / Giselle / Winter / Ningning)</name>
+        <description><![CDATA[成員：Karina / Giselle / Winter / Ningning<br/>分類：餐廳（烏龍麵・壽喜燒）<br/>造訪時間：2023-03<br/>日文店名：うどんちり本家 にし家 本店<br/>地址：大阪府大阪市中央区東心斎橋1-18-18<br/>同款／亮點：天婦羅冷烏龍麵套餐<br/>說明：Winter 發布 IG 認證照，巡禮整理指實為全員同行聚餐之東心齋橋老舖。<br/>IG／影片：https://www.instagram.com/p/Cp_-FubBXKQ/<br/>考據來源：https://oshito.online/map/837.html]]></description>
+        <Point>
+          <coordinates>135.502396,34.673729,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>しばいたろか！！ (Shibaitaroka!!) (Karina / Giselle / Winter / Ningning)</name>
+        <description><![CDATA[成員：Karina / Giselle / Winter / Ningning<br/>分類：餐廳（章魚燒・鐵板燒）<br/>造訪時間：2023<br/>日文店名：しばいたろか！！<br/>地址：大阪府大阪市中央区西心斎橋1-16-16<br/>同款／亮點：店內直接提供粉絲專屬「aespa套餐（aespaセット）」<br/>說明：位於美國村核心地帶，老闆特別整理出成員同款套餐方便 MY 一鍵點餐。<br/>考據來源：https://sukimazikan-otomo.com/aespa-seichi-osaka/]]></description>
+        <Point>
+          <coordinates>135.497589,34.672489,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>甲賀流 アメリカ村本店 (Karina / Giselle / Winter / Ningning)</name>
+        <description><![CDATA[成員：Karina / Giselle / Winter / Ningning<br/>分類：餐廳（章魚燒）<br/>造訪時間：2024<br/>日文店名：甲賀流 本店<br/>地址：大阪府大阪市中央区西心斎橋2-18-4<br/>同款／亮點：蔥花柚子醋章魚燒（ねぎポン）與王道美乃滋章魚燒<br/>說明：美國村三角公園正對面的地標級章魚燒名店。<br/>考據來源：https://sukimazikan-otomo.com/aespa-seichi-osaka/]]></description>
+        <Point>
+          <coordinates>135.497757,34.672264,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>くだものだもの (Kudamono Damono) (Karina / Giselle / Winter / Ningning)</name>
+        <description><![CDATA[成員：Karina / Giselle / Winter / Ningning<br/>分類：咖啡廳（鮮果飲品吧）<br/>造訪時間：2023 / 2024<br/>日文店名：くだものだもの 大阪駅前第4ビル店<br/>地址：大阪府大阪市北区梅田1-11-4 大阪駅前第4ビル B2F<br/>同款／亮點：小熊造型瓶裝草莓牛奶、草莓香蕉牛奶<br/>營業備註：屬演唱會後台外送應援愛店（非親赴店面），鄰近 JR 大阪站方便外帶<br/>說明：aespa 大阪公演連續兩年指定訂購的後台飲品愛店。<br/>IG／影片：https://www.instagram.com/p/C9O-yhCz0ES/<br/>考據來源：https://sukimazikan-otomo.com/aespa-seichi-osaka/]]></description>
+        <Point>
+          <coordinates>135.499298,34.699581,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>御堂筋大丸前斑馬線＆心齋橋神座拉麵旁自販機 (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：景點（街拍地標）<br/>造訪時間：2023-03<br/>日文店名：大丸心斎橋店 本館前<br/>地址：大阪府大阪市中央区西心斎橋1-4-3<br/>同款／亮點：御堂筋斑馬線夜拍＆心齋橋長堀店旁自動販賣機（IG: CqAbDnjB2RE）<br/>說明：2023年首次日巡大阪站期間 Karina 經典街頭照。<br/>IG／影片：https://www.instagram.com/p/CqAbfWjhVeK/<br/>考據來源：https://oshito.online/map/2454.html]]></description>
+        <Point>
+          <coordinates>135.500092,34.673267,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>HYSTERIC GLAMOUR 大阪店＆南堀江立花通 (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：購物（搖滾潮流服飾）<br/>造訪時間：2024-11<br/>日文店名：ヒステリックグラマー 大阪店<br/>地址：大阪府大阪市西区南堀江1-20-10<br/>同款／亮點：南堀江 Orange Street 入口（南堀江1-9-1）街拍與逛街<br/>說明：Giselle 大阪潮流街區堀江（Orange Street）私下購物行程。<br/>IG／影片：https://www.instagram.com/p/DCWp0aKy_nv/<br/>考據來源：https://oshito.online/map/14043.html]]></description>
+        <Point>
+          <coordinates>135.493973,34.67115,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大阪城公園 (Winter)</name>
+        <description><![CDATA[成員：Winter<br/>分類：景點（歷史公園地標）<br/>造訪時間：2025-11<br/>日文店名：大阪城公園<br/>地址：大阪府大阪市中央区大阪城1-1<br/>同款／亮點：秋日銀杏紅葉期間大阪城散步打卡<br/>說明：2025年11月26日大阪城展演廳開唱當日散步留影。<br/>IG／影片：https://www.instagram.com/p/DRhcY8ak9uT/<br/>考據來源：https://oshito.online/map/17353.html]]></description>
+        <Point>
+          <coordinates>135.526201,34.687315,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>和風やすらぎ カルモ (Wafu Yasuragi Calmo) (Ningning)</name>
+        <description><![CDATA[成員：Ningning<br/>分類：餐廳（關東煮居酒屋）<br/>造訪時間：2025<br/>日文店名：和風やすらぎ カルモ<br/>地址：大阪府大阪市福島区福島2-9-11<br/>同款／亮點：招牌日式關東煮（おでん）與家庭風味下酒菜<br/>營業備註：巷弄小店座位精簡，請配合在地用餐禮儀<br/>說明：位於大阪美食激戰區「福島」的高評價溫馨巷弄居酒屋。<br/>考據來源：https://sukimazikan-otomo.com/aespa-seichi-osaka/]]></description>
+        <Point>
+          <coordinates>135.485809,34.694233,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>平安神宮 神苑（泰平閣） (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：景點（神社古蹟庭園）<br/>造訪時間：2023-03<br/>日文店名：平安神宮<br/>地址：京都府京都市左京区岡崎西天王町97<br/>同款／亮點：神苑池畔泰平閣橋殿與烏龜留影<br/>說明：Giselle 為目前唯一留下完整京都古都私人巡禮紀錄的成員。<br/>IG／影片：https://www.instagram.com/p/Cp6aV1GP8wt/<br/>考據來源：https://oshito.online/map/2460.html]]></description>
+        <Point>
+          <coordinates>135.782562,35.015724,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>祇園饅頭 工場 (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：咖啡廳（京都老舖和菓子）<br/>造訪時間：2023-03<br/>日文店名：祇園饅頭 工場<br/>地址：京都府京都市東山区大井手町103<br/>同款／亮點：三色花見糰子與六方燒<br/>說明：三條京阪站附近現做直售的百年和菓子老舖工場。<br/>IG／影片：https://www.instagram.com/p/Cp6ZuklvYpI/<br/>考據來源：https://oshito.online/map/2462.html]]></description>
+        <Point>
+          <coordinates>135.780777,35.009544,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>伏見稻荷大社 千本鳥居 (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：景點（神社古蹟）<br/>造訪時間：2023-03<br/>日文店名：伏見稲荷大社 千本鳥居<br/>地址：京都府京都市伏見区深草藪之内町68<br/>同款／亮點：朱紅千本鳥居隧道打卡<br/>說明：2023年3月首次日巡空檔京都一日遊經典地標。<br/>IG／影片：https://www.instagram.com/p/Cp6ZuklvYpI/<br/>考據來源：https://oshito.online/map/2458.html]]></description>
+        <Point>
+          <coordinates>135.773499,34.967037,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>京瓷巨蛋大阪 (Kyocera Dome Osaka) (Karina / Giselle / Winter / Ningning)</name>
+        <description><![CDATA[成員：Karina / Giselle / Winter / Ningning<br/>分類：演出場館（巨蛋公演聖地）<br/>造訪時間：2026 / 2027<br/>日文店名：京セラドーム大阪<br/>地址：大阪府大阪市西区千代崎3-中2-1<br/>同款／亮點：2026 aeXIS LINE ＆ 2027 COMPLaeXITY 關西巨蛋主場<br/>說明：距離心齋橋與南堀江僅兩站地鐵。<br/>考據來源：https://aespa-official.jp/news/dometour2027-fc/]]></description>
+        <Point>
+          <coordinates>135.477341,34.669487,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>福岡</name>
+      <Placemark>
+        <name>Pain Stock 天神店 (パンストック) (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：咖啡廳（人氣烘焙麵包咖啡）<br/>造訪時間：2025-10<br/>日文店名：パンストック 天神店<br/>地址：福岡県福岡市中央区西中洲6-17<br/>同款／亮點：天神中央公園旁購買招牌烘焙麵包<br/>營業備註：福岡排隊名店，明太子法國麵包極受歡迎<br/>說明：同日並於鄰近 ACROS 福岡前（oshito 16737）與中洲西大橋散步留影。<br/>IG／影片：https://www.instagram.com/p/DPvxP3MEtN4/<br/>考據來源：https://oshito.online/map/16856.html]]></description>
+        <Point>
+          <coordinates>130.403931,33.591404,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>入江書店 (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：購物（獨立古書店）<br/>造訪時間：2025-10<br/>日文店名：入江書店<br/>地址：福岡県福岡市中央区大名1-14-24<br/>同款／亮點：大名巷弄古書店書架前文青街拍<br/>說明：福岡巡演空檔探訪之充滿昭和書香氛圍古書店。<br/>IG／影片：https://www.instagram.com/p/DPvxP3MEtN4/<br/>考據來源：https://oshito.online/map/16852.html]]></description>
+        <Point>
+          <coordinates>130.395142,33.587685,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中洲 西大橋 (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：景點（河岸橋樑街拍）<br/>造訪時間：2025-10<br/>日文店名：西大橋<br/>地址：福岡県福岡市中央区西中洲1<br/>同款／亮點：那珂川河岸橋畔留影<br/>說明：緊鄰 Pain Stock 天神店的福岡河岸散步點。<br/>IG／影片：https://www.instagram.com/p/DPvxP3MEtN4/<br/>考據來源：https://oshito.online/map/16848.html]]></description>
+        <Point>
+          <coordinates>130.405884,33.590271,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>福岡別府橋通（別府2丁目交叉口） (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：景點（街拍熱點）<br/>造訪時間：2026-02<br/>日文店名：別府橋通り<br/>地址：福岡県福岡市城南区別府2-21<br/>同款／亮點：手提藍色 Prada 手袋過馬路女友感街拍<br/>說明：SMTOWN 福岡巨蛋公演隔日發文爆紅的日常街區座標。<br/>IG／影片：https://www.instagram.com/p/DUQAXy7Eu4w/<br/>考據來源：https://oshito.online/map/17152.html]]></description>
+        <Point>
+          <coordinates>130.368912,33.573498,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>福岡麗思卡爾頓酒店 (The Ritz-Carlton Fukuoka) (Winter)</name>
+        <description><![CDATA[成員：Winter<br/>分類：餐廳（五星飯店＆餐飲）<br/>造訪時間：2024-07<br/>日文店名：ザ・リッツ・カールトン福岡<br/>地址：福岡県福岡市中央区大名2-6-50<br/>同款／亮點：館內景觀餐廳用餐打卡<br/>說明：2024年福岡公演期間下榻並分享館內用餐照之福岡大名 Garden City 地標飯店。<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>130.39473,33.589909,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>博多もつ鍋 前田屋 總本店 (Ningning)</name>
+        <description><![CDATA[成員：Ningning<br/>分類：餐廳（博多牛腸鍋）<br/>造訪時間：2024-07<br/>日文店名：博多もつ鍋 前田屋 総本店<br/>地址：福岡県福岡市博多区博多駅東2-9-20<br/>同款／亮點：招牌和牛牛腸鍋（みそ味／しょうゆ味）<br/>營業備註：極受歡迎的博多牛腸鍋名店，強烈建議提前預約<br/>說明：距離博多站筑紫口步行約6分鐘，Ningning 親自於 IG 認證之實力派名店。<br/>IG／影片：https://www.instagram.com/p/C9MOJZXSvi3/<br/>考據來源：https://oshito.online/map/11702.html]]></description>
+        <Point>
+          <coordinates>130.425568,33.587627,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>沖繩</name>
+      <Placemark>
+        <name>沖繩美麗海水族館 (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：景點（水族館地標）<br/>造訪時間：2024-12 / 2026-01<br/>日文店名：沖縄美ら海水族館<br/>地址：沖縄県国頭郡本部町石川424<br/>同款／亮點：黑潮之海鯨鯊大水槽前留影<br/>說明：Karina 兩度造訪；2026年初與好友 ITZY 留眞、演員韓秀雅無偽裝同遊（IG: DU5Yb6SkgXD）。<br/>IG／影片：https://www.instagram.com/p/DDwLB8ByUk5/<br/>考據來源：https://oshito.online/map/14184.html]]></description>
+        <Point>
+          <coordinates>127.878372,26.693777,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>JUNGLIA OKINAWA（ジャングリア沖縄） (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：景點（自然主題樂園）<br/>造訪時間：2026-01<br/>日文店名：ジャングリア沖縄<br/>地址：沖縄県国頭郡今帰仁村呉我山553-1<br/>同款／亮點：沖繩北部全新叢林主題樂園友情旅行打卡<br/>說明：2026年初與 ITZY 留眞、韓秀雅結伴搶先體驗之全新話題樂園。<br/>IG／影片：https://www.instagram.com/p/DU5XlbbEmxY/<br/>考據來源：https://oshito.online/map/17158.html]]></description>
+        <Point>
+          <coordinates>127.969582,26.642988,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>那霸國際通・白木屋牧志店周邊＆Blue Seal (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：購物（商圈逛街／冰品）<br/>造訪時間：2026-01<br/>日文店名：国際通り 牧志<br/>地址：沖縄県那覇市牧志2-1-1<br/>同款／亮點：逛唐吉訶德周邊、看寶可夢夾娃娃機並品嚐 Blue Seal 冰淇淋<br/>說明：沖繩友情旅行那霸市區晚間散步路線。<br/>IG／影片：https://www.instagram.com/p/DU5duGVkTxd/<br/>考據來源：https://www.thefirsttimes.jp/news/0000767643/]]></description>
+        <Point>
+          <coordinates>127.688072,26.216391,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>安良波海灘 (Araha Beach) (Winter)</name>
+        <description><![CDATA[成員：Winter<br/>分類：景點（海灘自然景點）<br/>造訪時間：2024-01<br/>日文店名：アラハビーチ<br/>地址：沖縄県中頭郡北谷町北谷2-16-2<br/>同款／亮點：《Wintering Vlog》黃昏海濱散步（Vlog: youtube.com/watch?v=XMK5SYlLzoo）<br/>說明：Winter 沖繩個人旅行首波公開的療癒海灘。<br/>IG／影片：https://www.instagram.com/p/C2MB5-cPkwr/<br/>考據來源：https://oshito.online/map/11431.html]]></description>
+        <Point>
+          <coordinates>127.759811,26.305321,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>備瀨崎海灘 (Bisezaki Beach) (Winter)</name>
+        <description><![CDATA[成員：Winter<br/>分類：景點（海灘自然景點）<br/>造訪時間：2024-01<br/>日文店名：備瀬崎<br/>地址：沖縄県国頭郡本部町備瀬639-21<br/>同款／亮點：清澈祖母綠海景前直呼「好想住在這裡！」<br/>說明：鄰近備瀨福木林道與美麗海水族館，可與 Karina 水族館點位串聯。<br/>IG／影片：https://www.instagram.com/p/C2RXvUlPGed/<br/>考據來源：https://oshito.online/map/11412.html]]></description>
+        <Point>
+          <coordinates>127.880142,26.708784,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Beach 51（ザネー浜） (Winter)</name>
+        <description><![CDATA[成員：Winter<br/>分類：景點（懸崖海蝕洞海灘）<br/>造訪時間：2024-01<br/>日文店名：ザネー浜<br/>地址：沖縄県国頭郡恩納村真栄田712-2<br/>同款／亮點：岩石窗景與海崖視野拍照、初體驗浮潛<br/>說明：真榮田岬旁的天然秘境海灘。<br/>IG／影片：https://www.instagram.com/p/C2erHSYv4nI/<br/>考據來源：https://oshito.online/map/11440.html]]></description>
+        <Point>
+          <coordinates>127.762749,26.430632,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>沖繩居酒屋 すん。 (Winter)</name>
+        <description><![CDATA[成員：Winter<br/>分類：餐廳（沖繩料理居酒屋）<br/>造訪時間：2024-01<br/>日文店名：沖縄居酒屋 すん。<br/>地址：沖縄県那覇市牧志3-1-39<br/>同款／亮點：《Wintering Vlog》品嚐道地沖繩家庭料理<br/>說明：位於那霸國際通巷弄內的沖繩鄉土居酒屋。<br/>IG／影片：https://www.instagram.com/p/C2MB5-cPkwr/<br/>考據來源：https://oshito.online/map/11424.html]]></description>
+        <Point>
+          <coordinates>127.688118,26.215792,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>酒のみ屋 魚久 2號店 (Winter)</name>
+        <description><![CDATA[成員：Winter<br/>分類：餐廳（海鮮居酒屋）<br/>造訪時間：2024-01<br/>日文店名：酒のみ屋 魚久 2号店<br/>地址：沖縄県那覇市松尾2-10-20<br/>同款／亮點：沖繩近海生魚片與居酒屋料理<br/>說明：《Wintering Vlog》收錄的第二間那霸在地居酒屋。<br/>IG／影片：https://www.instagram.com/p/C2MB5-cPkwr/<br/>考據來源：https://oshito.online/map/11426.html]]></description>
+        <Point>
+          <coordinates>127.68853,26.213667,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>うつわスカート（ヤッチとムーン） (Winter)</name>
+        <description><![CDATA[成員：Winter<br/>分類：購物（壺屋燒陶器選物店）<br/>造訪時間：2024-01<br/>日文店名：ヤッチとムーン<br/>地址：沖縄県那覇市壺屋1-21-9<br/>同款／亮點：挑選沖繩傳統壺屋燒（やちむん）器皿與琉球松砧板<br/>說明：壺屋やちむん通り超人氣小熊陶器選物小店。<br/>IG／影片：https://www.instagram.com/p/C2MB5-cPkwr/<br/>考據來源：https://oshito.online/map/11433.html]]></description>
+        <Point>
+          <coordinates>127.692131,26.212706,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>美國村 Depot Island＆Splash Okinawa 美濱店 (Winter)</name>
+        <description><![CDATA[成員：Winter<br/>分類：購物（海濱商區／伴手禮）<br/>造訪時間：2024-01<br/>日文店名：デポアイランド 北谷<br/>地址：沖縄県中頭郡北谷町美浜9-1<br/>同款／亮點：逛美國村彩色建築群、日落海灘與 Splash Okinawa（美浜9-19）買伴手禮<br/>說明：另亦順訪宇流麻市在地商場 San-A 石川 City（うるま市石川2521-1）採買零食。<br/>IG／影片：https://www.instagram.com/p/C2erHSYv4nI/<br/>考據來源：https://oshito.online/map/11446.html]]></description>
+        <Point>
+          <coordinates>127.754196,26.315735,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>おんなの駅 なかゆくい市場「琉冰」 (Giselle)</name>
+        <description><![CDATA[成員：Giselle<br/>分類：咖啡廳（熱帶水果刨冰）<br/>造訪時間：2025-06<br/>日文店名：おんなの駅 なかゆくい市場 琉冰<br/>地址：沖縄県国頭郡恩納村仲泊1656-9<br/>同款／亮點：沖繩恩納村人氣熱帶水果山刨冰（アイスマウンテン）<br/>說明：oshito 聖地資料庫收錄之 Giselle 2025年夏季沖繩打卡冰店。<br/>IG／影片：https://www.instagram.com/p/DK8k6kPSfVb/<br/>考據來源：https://oshito.online/map/16474.html]]></description>
+        <Point>
+          <coordinates>127.798828,26.434395,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>北海道</name>
+      <Placemark>
+        <name>奧定山溪溫泉 佳松御苑 (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：景點（森林溫泉旅館）<br/>造訪時間：2024-01<br/>日文店名：奥定山渓温泉 佳松御苑<br/>地址：北海道札幌市南区定山渓857<br/>同款／亮點：全室附設展望溫泉風呂與北海道義式懷石晚餐<br/>說明：Karina 2024年初北海道私人冬季旅行（katarinabluu-log）下榻之靜謐雪景溫泉飯店。<br/>IG／影片：https://www.youtube.com/watch?v=-IciW3tLF7Y<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>141.147339,42.946987,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大正硝子館 本店 (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：購物（玻璃工藝名店）<br/>造訪時間：2024-01<br/>日文店名：大正硝子館 本店<br/>地址：北海道小樽市色内1-1-8<br/>同款／亮點：石造歷史建築店門前與小雪人合照打卡<br/>說明：小樽運河旁明治時期銀行建築改建的手工玻璃藝品店。<br/>IG／影片：https://www.youtube.com/watch?v=-IciW3tLF7Y<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>141.002472,43.196903,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>おたる蔵屋 總本店 (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：餐廳（北海道味噌拉麵）<br/>造訪時間：2024-01<br/>日文店名：おたる蔵屋 総本店<br/>地址：北海道小樽市住吉町10-1<br/>同款／亮點：冬日熱騰騰北海道拉麵與煎餃<br/>說明：鄰近南小樽站與音樂盒堂本館的拉麵店。<br/>IG／影片：https://www.youtube.com/watch?v=-IciW3tLF7Y<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>141.007309,43.187347,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>美瑛 聖誕樹之木 (Christmas Tree) (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：景點（冬日雪原自然地標）<br/>造訪時間：2024-01<br/>日文店名：クリスマスツリーの木<br/>地址：北海道上川郡美瑛町美馬牛<br/>同款／亮點：純白雪原孤木前冬日寫真<br/>營業備註：周邊為私人農地，務必僅於道路旁指定觀賞線外拍攝、切勿踏入雪原農田<br/>說明：Karina 北海道雪國代表美照地標。<br/>IG／影片：https://www.youtube.com/watch?v=-IciW3tLF7Y<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>142.427319,43.558657,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>森林精靈露台 (Ningle Terrace) (Karina)</name>
+        <description><![CDATA[成員：Karina<br/>分類：景點（森林工藝木屋聚落）<br/>造訪時間：2024-01<br/>日文店名：ニングルテラス<br/>地址：北海道富良野市中御料 新富良野プリンスホテル<br/>同款／亮點：夜間點燈童話森林木棧道散步<br/>說明：位於新富良野王子大飯店森林內的浪漫手作木屋群。<br/>IG／影片：https://www.youtube.com/watch?v=-IciW3tLF7Y<br/>考據來源：https://pro-otaku.com/2024-aespa-tokyo/]]></description>
+        <Point>
+          <coordinates>142.385352,43.320861,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

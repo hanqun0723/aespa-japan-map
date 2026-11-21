@@ -1,0 +1,30 @@
+{
+  "name": "aespa 日本聖地巡禮地圖",
+  "short_name": "aespa 聖地地圖",
+  "description": "aespa (Karina / Giselle / Winter / Ningning) 東京與全日本打卡美食、咖啡廳、購物與景點巡禮地圖",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F6F7FB",
+  "theme_color": "#121521",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
