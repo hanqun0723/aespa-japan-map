@@ -1,9 +1,9 @@
-const CACHE_NAME = "aespa-map-v2";
+const CACHE_NAME = "aespa-map-v3";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css",
-  "./app.js",
+  "./styles.css?v=3",
+  "./app.js?v=3",
   "./manifest.webmanifest",
   "./assets/icon.svg"
 ];
@@ -23,22 +23,18 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  const url = new URL(event.request.url);
   if (event.request.method !== "GET") return;
-  // Network-first for data/places.json and API endpoints so updates appear immediately
-  if (url.pathname.includes("/api/") || url.pathname.endsWith("places.json")) {
-    event.respondWith(
-      fetch(event.request)
-        .then((res) => {
+  // Network-first for all same-origin files so Safari refreshes immediately pick up latest UI & data,
+  // falling back to cache when offline (e.g. Tokyo subway).
+  event.respondWith(
+    fetch(event.request)
+      .then((res) => {
+        if (res && res.status === 200 && res.url.startsWith(self.location.origin)) {
           const clone = res.clone();
           caches.open(CACHE_NAME).then((c) => c.put(event.request, clone));
-          return res;
-        })
-        .catch(() => caches.match(event.request))
-    );
-    return;
-  }
-  event.respondWith(
-    caches.match(event.request).then((cached) => cached || fetch(event.request))
+        }
+        return res;
+      })
+      .catch(() => caches.match(event.request))
   );
 });

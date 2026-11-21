@@ -164,22 +164,22 @@
       tap: false,
     });
 
-    baseLayers = {
-      google_tw: L.tileLayer("https://mt1.google.com/vt/lyrs=m&hl=zh-TW&gl=JP&x={x}&y={y}&z={z}", {
-        attribution: "&copy; Google Maps",
-        maxZoom: 20,
-      }),
-      google_ja: L.tileLayer("https://mt1.google.com/vt/lyrs=m&hl=ja&gl=JP&x={x}&y={y}&z={z}", {
-        attribution: "&copy; Google Maps",
-        maxZoom: 20,
-      }),
-      osm: L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        maxZoom: 19,
-      }),
-    };
+    L.tileLayer("https://mt1.google.com/vt/lyrs=m&hl=zh-TW&gl=JP&x={x}&y={y}&z={z}", {
+      attribution: "&copy; Google Maps",
+      maxZoom: 20,
+    }).addTo(map);
 
-    baseLayers.google_tw.addTo(map);
+    // Prevent touch/wheel gestures on bottom sheets from panning/zooming the map underneath
+    const sidebarEl = document.getElementById("sidebarPanel");
+    const detailEl = document.getElementById("detailCard");
+    if (sidebarEl) {
+      L.DomEvent.disableClickPropagation(sidebarEl);
+      L.DomEvent.disableScrollPropagation(sidebarEl);
+    }
+    if (detailEl) {
+      L.DomEvent.disableClickPropagation(detailEl);
+      L.DomEvent.disableScrollPropagation(detailEl);
+    }
 
     clusterGroup = L.markerClusterGroup({
       showCoverageOnHover: false,
@@ -1251,7 +1251,181 @@
 
   function updateMobileSheetHint() {
     const isOpen = document.getElementById("sidebarPanel").classList.contains("sheet-open");
-    document.getElementById("mobileSheetToggleLabel").textContent = isOpen ? "收合清單 ▼" : "展開清單 ▲";
+    document.getElementById("mobileSheetToggleLabel").textContent = isOpen ? "下滑收合 ▼" : "上滑展開 ▲";
+  }
+
+  function initMobileSheetGestures() {
+    const panel = document.getElementById("sidebarPanel");
+    const handle = document.getElementById("sheetDragHandle");
+    const listEl = document.getElementById("placesList");
+    const detailCard = document.getElementById("detailCard");
+
+    const getCollapsedOffset = () => {
+      const handleHeight = handle.offsetHeight || 68;
+      return Math.max(0, panel.offsetHeight - handleHeight);
+    };
+
+    const setSheetOpen = (open) => {
+      panel.style.transform = "";
+      panel.classList.toggle("sheet-open", open);
+      updateMobileSheetHint();
+    };
+
+    // Click fallback on the peek header
+    let suppressNextClick = false;
+    handle.addEventListener("click", () => {
+      if (suppressNextClick) {
+        suppressNextClick = false;
+        return;
+      }
+      setSheetOpen(!panel.classList.contains("sheet-open"));
+    });
+
+    let startY = 0;
+    let startTranslateY = 0;
+    let currentTranslateY = 0;
+    let startTime = 0;
+    let tracking = false;
+    let dragged = false;
+
+    panel.addEventListener(
+      "touchstart",
+      (ev) => {
+        if (window.innerWidth > 860 || ev.touches.length !== 1) return;
+        const isOpen = panel.classList.contains("sheet-open");
+        const onHandle = Boolean(ev.target.closest("#sheetDragHandle") || ev.target.closest(".sidebar-filters"));
+        const atListTop = isOpen && listEl.contains(ev.target) && listEl.scrollTop <= 0;
+
+        // Always allow dragging when collapsed OR touching handle/filters OR pulling down from top of list
+        if (!isOpen || onHandle || atListTop) {
+          startY = ev.touches[0].clientY;
+          startTime = Date.now();
+          const collapsedY = getCollapsedOffset();
+          startTranslateY = isOpen ? 0 : collapsedY;
+          currentTranslateY = startTranslateY;
+          tracking = true;
+          dragged = false;
+        }
+        ev.stopPropagation();
+      },
+      { passive: true }
+    );
+
+    panel.addEventListener(
+      "touchmove",
+      (ev) => {
+        ev.stopPropagation();
+        if (!tracking || window.innerWidth > 860) return;
+        const dy = ev.touches[0].clientY - startY;
+        const isOpen = panel.classList.contains("sheet-open");
+        const onHandle = Boolean(ev.target.closest("#sheetDragHandle"));
+
+        // If open and user scrolls upward inside the list, let native list scroll take over
+        if (isOpen && !onHandle && listEl.contains(ev.target) && dy < 0) {
+          tracking = false;
+          panel.classList.remove("is-dragging");
+          panel.style.transform = "";
+          return;
+        }
+
+        // Prevent horizontal chip scroll from triggering sheet drag unless mostly vertical
+        if (!dragged && Math.abs(dy) < 6) return;
+
+        if (ev.cancelable) ev.preventDefault();
+        dragged = true;
+        panel.classList.add("is-dragging");
+
+        const collapsedY = getCollapsedOffset();
+        currentTranslateY = Math.min(collapsedY, Math.max(0, startTranslateY + dy));
+        panel.style.transform = `translateY(${currentTranslateY}px)`;
+      },
+      { passive: false }
+    );
+
+    const finishPanelDrag = (ev) => {
+      if (ev) ev.stopPropagation();
+      if (!tracking) return;
+      tracking = false;
+      panel.classList.remove("is-dragging");
+
+      if (!dragged) {
+        panel.style.transform = "";
+        return;
+      }
+
+      suppressNextClick = true;
+      setTimeout(() => {
+        suppressNextClick = false;
+      }, 250);
+
+      const collapsedY = getCollapsedOffset();
+      const totalDy = currentTranslateY - startTranslateY;
+      const elapsed = Math.max(1, Date.now() - startTime);
+      const velocity = totalDy / elapsed; // px per ms
+
+      if (velocity < -0.28 || totalDy < -36) {
+        setSheetOpen(true);
+      } else if (velocity > 0.28 || totalDy > 42) {
+        setSheetOpen(false);
+      } else {
+        setSheetOpen(currentTranslateY < collapsedY * 0.5);
+      }
+    };
+
+    panel.addEventListener("touchend", finishPanelDrag, { passive: true });
+    panel.addEventListener("touchcancel", finishPanelDrag, { passive: true });
+
+    // Swipe-down to dismiss Spot Detail Bottom Sheet on mobile
+    let detailStartY = 0;
+    let detailDy = 0;
+    let detailTracking = false;
+
+    detailCard.addEventListener(
+      "touchstart",
+      (ev) => {
+        ev.stopPropagation();
+        if (window.innerWidth > 860 || ev.touches.length !== 1) return;
+        if (detailCard.scrollTop <= 0) {
+          detailStartY = ev.touches[0].clientY;
+          detailDy = 0;
+          detailTracking = true;
+        }
+      },
+      { passive: true }
+    );
+
+    detailCard.addEventListener(
+      "touchmove",
+      (ev) => {
+        ev.stopPropagation();
+        if (!detailTracking || window.innerWidth > 860) return;
+        const dy = ev.touches[0].clientY - detailStartY;
+        if (dy > 6) {
+          if (ev.cancelable) ev.preventDefault();
+          detailDy = dy;
+          detailCard.classList.add("is-dragging");
+          detailCard.style.transform = `translateY(${dy}px)`;
+        } else if (dy < -6) {
+          detailTracking = false;
+        }
+      },
+      { passive: false }
+    );
+
+    const finishDetailDrag = (ev) => {
+      if (ev) ev.stopPropagation();
+      if (!detailTracking) return;
+      detailTracking = false;
+      detailCard.classList.remove("is-dragging");
+      detailCard.style.transform = "";
+      if (detailDy > 65) {
+        closeDetailCard();
+      }
+      detailDy = 0;
+    };
+
+    detailCard.addEventListener("touchend", finishDetailDrag, { passive: true });
+    detailCard.addEventListener("touchcancel", finishDetailDrag, { passive: true });
   }
 
   function bindEvents() {
@@ -1352,25 +1526,11 @@
       selectPlace(row.dataset.id, true);
     });
 
-    // Mobile Bottom Drawer Toggle
-    document.getElementById("sheetDragHandle").addEventListener("click", () => {
-      const panel = document.getElementById("sidebarPanel");
-      panel.classList.toggle("sheet-open");
-      updateMobileSheetHint();
-    });
+    // Mobile Bottom Drawer Touch Swipe + Tap Gesture
+    initMobileSheetGestures();
 
     // Detail Card Close
     document.getElementById("closeDetailBtn").addEventListener("click", closeDetailCard);
-
-    // Map Basemap Switcher & Controls
-    document.querySelectorAll(".basemap-btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const key = btn.dataset.layer;
-        Object.values(baseLayers).forEach((l) => map.removeLayer(l));
-        baseLayers[key]?.addTo(map);
-        document.querySelectorAll(".basemap-btn").forEach((b) => b.classList.toggle("active", b === btn));
-      });
-    });
 
     document.getElementById("fitBoundsBtn").addEventListener("click", () => renderAll(true));
     document.getElementById("zoomInBtn")?.addEventListener("click", () => map.zoomIn());

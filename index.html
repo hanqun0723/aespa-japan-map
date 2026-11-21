@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" crossorigin="" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" crossorigin="" />
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles.css?v=3" />
 </head>
 <body>
   <div id="app" class="app-shell">
@@ -125,11 +125,6 @@
 
       <!-- Floating Map Controls -->
       <div class="map-floating-controls">
-        <div class="basemap-switcher" role="group" aria-label="地圖底圖切換">
-          <button class="basemap-btn active" data-layer="google_tw" type="button" title="Google 地圖（繁中／日文地標）">Google 中文</button>
-          <button class="basemap-btn" data-layer="google_ja" type="button" title="Google 地圖（日文原名地標）">Google 日文</button>
-          <button class="basemap-btn" data-layer="osm" type="button" title="OpenStreetMap 街道圖">OSM</button>
-        </div>
         <div class="zoom-fab-group desktop-only">
           <button id="zoomInBtn" class="map-fab" type="button" title="放大地圖" aria-label="放大地圖">＋</button>
           <button id="zoomOutBtn" class="map-fab" type="button" title="縮小地圖" aria-label="縮小地圖">－</button>
@@ -390,6 +385,6 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" crossorigin=""></script>
-  <script src="./app.js"></script>
+  <script src="./app.js?v=3"></script>
 </body>
 </html>
