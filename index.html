@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" crossorigin="" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" crossorigin="" />
-  <link rel="stylesheet" href="./styles.css?v=4" />
+  <link rel="stylesheet" href="./styles.css?v=5" />
 </head>
 <body>
   <div id="app" class="app-shell">
@@ -125,9 +125,9 @@
 
       <!-- Floating Map Controls -->
       <div class="map-floating-controls">
-        <div class="zoom-fab-group desktop-only">
-          <button id="zoomInBtn" class="map-fab" type="button" title="放大地圖" aria-label="放大地圖">＋</button>
-          <button id="zoomOutBtn" class="map-fab" type="button" title="縮小地圖" aria-label="縮小地圖">－</button>
+        <div class="zoom-fab-group" role="group" aria-label="地圖縮放">
+          <button id="zoomInBtn" class="zoom-pill-btn" type="button" title="放大地圖" aria-label="放大地圖">＋</button>
+          <button id="zoomOutBtn" class="zoom-pill-btn" type="button" title="縮小地圖" aria-label="縮小地圖">－</button>
         </div>
         <button id="locateMeBtn" class="map-fab" type="button" title="定位我目前的位置" aria-label="定位我的位置">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
@@ -385,6 +385,6 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" crossorigin=""></script>
-  <script src="./app.js?v=4"></script>
+  <script src="./app.js?v=5"></script>
 </body>
 </html>

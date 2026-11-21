@@ -212,6 +212,118 @@
         closeDetailCard();
       }
     });
+
+    initOneHandMapZoom();
+  }
+
+  function initOneHandMapZoom() {
+    const container = document.getElementById("mapContainer");
+    if (!container) return;
+
+    let lastTapTime = 0;
+    let lastTapX = 0;
+    let lastTapY = 0;
+    let oneHandZooming = false;
+    let startY = 0;
+    let baseZoom = 13;
+    let lastAppliedZoom = 13;
+    let anchorPt = null;
+    let draggedDuringHold = false;
+
+    // Two-finger quick tap to zoom out
+    let twoFingerStart = 0;
+    let twoFingerMoved = false;
+
+    container.addEventListener(
+      "touchstart",
+      (ev) => {
+        if (!ev.touches) return;
+
+        if (ev.touches.length === 2) {
+          oneHandZooming = false;
+          twoFingerStart = Date.now();
+          twoFingerMoved = false;
+          return;
+        }
+
+        if (ev.touches.length !== 1) return;
+        if (ev.target.closest(".aespa-pin, .aespa-cluster, .leaflet-control")) return;
+
+        const t = ev.touches[0];
+        const now = Date.now();
+        const dt = now - lastTapTime;
+        const dist = Math.hypot(t.clientX - lastTapX, t.clientY - lastTapY);
+
+        if (dt > 40 && dt < 320 && dist < 36) {
+          // Second tap detected: enable Google Maps style Double-Tap + Hold Drag Zoom!
+          oneHandZooming = true;
+          draggedDuringHold = false;
+          startY = t.clientY;
+          baseZoom = map.getZoom();
+          lastAppliedZoom = baseZoom;
+          const rect = container.getBoundingClientRect();
+          anchorPt = L.point(t.clientX - rect.left, t.clientY - rect.top);
+          map.dragging.disable();
+          if (ev.cancelable) ev.preventDefault();
+          lastTapTime = 0; // reset so 3rd tap starts fresh
+        } else {
+          lastTapTime = now;
+          lastTapX = t.clientX;
+          lastTapY = t.clientY;
+        }
+      },
+      { passive: false }
+    );
+
+    container.addEventListener(
+      "touchmove",
+      (ev) => {
+        if (!ev.touches) return;
+        if (ev.touches.length === 2) {
+          twoFingerMoved = true;
+          return;
+        }
+        if (!oneHandZooming || ev.touches.length !== 1) return;
+        if (ev.cancelable) ev.preventDefault();
+
+        const dy = ev.touches[0].clientY - startY;
+        if (Math.abs(dy) > 10) {
+          draggedDuringHold = true;
+        }
+        // Slide thumb DOWN (dy > 0) = Zoom IN, Slide thumb UP (dy < 0) = Zoom OUT (42px per level)
+        const deltaLevels = Math.round(dy / 42);
+        const targetZoom = Math.max(map.getMinZoom(), Math.min(map.getMaxZoom(), baseZoom + deltaLevels));
+        if (targetZoom !== lastAppliedZoom && anchorPt) {
+          lastAppliedZoom = targetZoom;
+          map.setZoomAround(anchorPt, targetZoom, { animate: true });
+        }
+      },
+      { passive: false }
+    );
+
+    const endTouch = (ev) => {
+      if (twoFingerStart && (!ev.touches || ev.touches.length === 0)) {
+        if (!twoFingerMoved && Date.now() - twoFingerStart < 260) {
+          map.zoomOut(1);
+        }
+        twoFingerStart = 0;
+      }
+
+      if (!oneHandZooming) return;
+      oneHandZooming = false;
+      map.dragging.enable();
+
+      // Quick double-tap without vertical drag -> zoom in 1 level around tapped point
+      if (!draggedDuringHold && anchorPt) {
+        map.doubleClickZoom.disable();
+        map.setZoomAround(anchorPt, Math.min(map.getMaxZoom(), baseZoom + 1), { animate: true });
+        setTimeout(() => map.doubleClickZoom.enable(), 350);
+      }
+      anchorPt = null;
+    };
+
+    container.addEventListener("touchend", endTouch, { passive: true });
+    container.addEventListener("touchcancel", endTouch, { passive: true });
   }
 
   function createPinIcon(place, isSelected, routeOrderIndex = null) {
@@ -1564,8 +1676,40 @@
     document.getElementById("closeDetailBtn").addEventListener("click", closeDetailCard);
 
     document.getElementById("fitBoundsBtn").addEventListener("click", () => renderAll(true));
-    document.getElementById("zoomInBtn")?.addEventListener("click", () => map.zoomIn());
-    document.getElementById("zoomOutBtn")?.addEventListener("click", () => map.zoomOut());
+
+    // Tap or Press-and-Hold continuous zoom on + / - buttons
+    const bindZoomHold = (btnId, dir) => {
+      const btn = document.getElementById(btnId);
+      if (!btn) return;
+      let holdTimer = null;
+      let repeatTimer = null;
+      let didRepeat = false;
+
+      const step = () => (dir > 0 ? map.zoomIn(1) : map.zoomOut(1));
+      const stopHold = () => {
+        clearTimeout(holdTimer);
+        clearInterval(repeatTimer);
+      };
+
+      btn.addEventListener("pointerdown", (ev) => {
+        ev.stopPropagation();
+        didRepeat = false;
+        holdTimer = setTimeout(() => {
+          didRepeat = true;
+          step();
+          repeatTimer = setInterval(step, 260);
+        }, 320);
+      });
+      btn.addEventListener("pointerup", stopHold);
+      btn.addEventListener("pointerleave", stopHold);
+      btn.addEventListener("pointercancel", stopHold);
+      btn.addEventListener("click", (ev) => {
+        ev.stopPropagation();
+        if (!didRepeat) step();
+      });
+    };
+    bindZoomHold("zoomInBtn", 1);
+    bindZoomHold("zoomOutBtn", -1);
 
     document.getElementById("locateMeBtn").addEventListener("click", () => {
       if (!navigator.geolocation) {

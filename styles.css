@@ -649,7 +649,37 @@ textarea {
 .zoom-fab-group {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-float);
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.zoom-pill-btn {
+  width: 38px;
+  height: 38px;
+  border: none;
+  background: transparent;
+  color: var(--ink-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.12rem;
+  font-weight: 700;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.zoom-pill-btn + .zoom-pill-btn {
+  border-top: 1px solid var(--border-hairline);
+}
+
+.zoom-pill-btn:active,
+.map-fab:active {
+  background: var(--bg-subtle);
 }
 
 .map-fab {
